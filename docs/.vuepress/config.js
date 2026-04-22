@@ -363,7 +363,7 @@ module.exports = {
 
   // 原有的 CDN publicPath 配置（生产环境用）
   if (process.env.NODE_ENV === 'production') {
-    config.output.publicPath = 'https://cdn.jsdelivr.net/gh/zmfk/zmfk.github.io@main/';
+    config.output.publicPath = 'https://cdn.jsdelivr.net/gh/zmfk/zmfk.github.io@master/';
   }
 }
 };
