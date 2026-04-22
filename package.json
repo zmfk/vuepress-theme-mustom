@@ -37,7 +37,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
+    "build": "vuepress build docs",
     "deploy": "deploy.sh",
     "adduser": "npm adduser",
     "usenpm": "npmuser.sh npm",
