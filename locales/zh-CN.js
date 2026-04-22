@@ -1,6 +1,6 @@
 module.exports = { // placeholder [::]
 
-  sitename: '耀 の 个人网站',
+  sitename: '醉梦 の 置物处',
 
   notfound: {
     caption: '404',
@@ -15,7 +15,7 @@ module.exports = { // placeholder [::]
   footer: {
     copyright: '© [:start_year:] - [:build_year:] [:author:]',
     powered: '由 [:vuepress:] 强力驱动',
-    themed: '主题 [:theme:] By [:author:]',
+    themed: '主题 [:theme:] By [:author:] , 本站由 SuiMu 维护，致谢原作者 jinyaoMa ',
     pv: '本站总点击量',
     uv: '本站总访客量',
     wd: '本站文章总字数',

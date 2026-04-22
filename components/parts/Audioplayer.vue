@@ -16,31 +16,23 @@
 </template>
 
 <script>
-import "aplayer/dist/APlayer.min.css";
 
 export default {
   name: "Audioplayer",
   data() {
     return {
-      coverSize: "90px", // APlayer cover size for .inner height config use
+      // coverSize: "90px", // APlayer cover size for .inner height config use
     };
   },
   mounted() {
-    import("aplayer/dist/APlayer.min.js").then((m) => {
-      window.APlayer = m.default;
-      import("meting/dist/Meting.min");
-    });
   },
   computed: {
     metingJs() {
       return (
-        `<meting-js ` +
-        `server="${this.$themeConfig.meting.server}"` +
-        `type="${this.$themeConfig.meting.type}"` +
-        `id="${this.$themeConfig.meting.id}"` +
-        `theme="${this.$themeConfig.meting.theme}"` +
-        `list-max-height="${this.$themeConfig.meting.height}"` +
-        `></meting-js>`
+        `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=480
+src="//music.163.com/outchain/player?type=0&id=7995413484&auto=0&height=480"
+style="position: relative; left: -10px; top: -10px;">
+</iframe>`
       );
     },
   },
@@ -50,6 +42,8 @@ export default {
 <style lang="stylus" scoped>
 .inner
   background var(--highlight)
+
+
 </style>
 
 <style lang="stylus">

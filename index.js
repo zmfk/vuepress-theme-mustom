@@ -153,19 +153,11 @@ module.exports = (themeConfig, context) => {
           }
         ],
         sitemap: {
-          hostname: themeConfig.domain || "https://ma-jinyao.cn",
+          hostname: themeConfig.domain || "https://zmfk.github.io",
           dateFormatter:
             themeConfig.dateFormatter ||
             ((time) => new Date(time).toISOString())
-        },
-        comment:
-          themeConfig.comment /* { // https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#comment
-          service: 'vssue',
-          owner: 'You',
-          repo: 'Your repo',
-          clientId: 'Your clientId',
-          clientSecret: 'Your clientSecret',
-        }*/
+        }
       }
     ],
     [
@@ -214,34 +206,34 @@ module.exports = (themeConfig, context) => {
     ],
     [
       // https://github.com/JoeyBling/vuepress-plugin-helper-live2d
-      "vuepress-plugin-helper-live2d",
-      {
-        log: false,
-        live2d: {
-          enable: true,
-          model: "haruto",
-          display: {
-            position: "right",
-            width: 180,
-            height: 270,
-            hOffset: 48,
-            vOffset: 0
-          },
-          mobile: {
-            show: false
-          },
-          react: {
-            opacity: 1
-          }
-        }
-      }
+      // "vuepress-plugin-helper-live2d",
+      // {
+      //   log: false,
+      //   live2d: {
+      //     enable: true,
+      //     model: "haruto",
+      //     display: {
+      //       position: "right",
+      //       width: 180,
+      //       height: 270,
+      //       hOffset: 48,
+      //       vOffset: 0
+      //     },
+      //     mobile: {
+      //       show: false
+      //     },
+      //     react: {
+      //       opacity: 1
+      //     }
+      //   }
+      // }
     ],
     [
       // https://sns.goyfe.com/guide/
       "vuepress-plugin-social-share",
       themeConfig.socialShare /*{
         networks: ['qq', 'weibo', 'douban', 'email', 'whatsapp', 'twitter', 'facebook', 'reddit', 'telegram', 'line'],
-        email: 'jinyao.ma@outlook.com',
+        email: '2272909403@qq.com',
         fallbackImage: '/social-share.png',
         autoQuote: true,
         isPlain: true
@@ -264,11 +256,11 @@ module.exports = (themeConfig, context) => {
       BUILD_TIMESTAMP: Date.now(),
       BUILD_YEAR: new Date().getFullYear(),
       VUEPRESS_OFFICIAL_SITE: "//vuepress.vuejs.org/",
-      THEME_REPO_URL: "//github.com/jinyaoMa/vuepress-theme-mustom",
+      THEME_REPO_URL: "//github.com/zmfk/vuepress-theme-mustom",
       THEME_NAME: name,
       THEME_SHORTNAME: "Mustom",
-      THEME_AUTHOR: "jinyaoMa",
-      THEME_AUTHOR_LINK: "//github.com/jinyaoMa",
+      THEME_AUTHOR: "SuiMu",
+      THEME_AUTHOR_LINK: "//github.com/zmfk",
       CC_LICENSE_LINK: "//creativecommons.org/licenses/by-nc-sa/4.0/"
     };
   };

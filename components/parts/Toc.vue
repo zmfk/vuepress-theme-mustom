@@ -6,7 +6,7 @@
       </span>
       <span v-html="mustom$Locale.toc.caption"></span>
     </div>
-    <div class="inner" @mouseup="closeSmooth">
+    <div class="inner" @click="handleTocClick">
       <TOC :include-level="[1, 3]" />
     </div>
   </div>
@@ -16,15 +16,25 @@
 export default {
   name: "Toc",
   methods: {
-    closeSmooth() {
-      const html = document.querySelector(":root");
-      const temp = html.style.scrollBehavior;
-      html.style.scrollBehavior = "unset";
-      window.setTimeout(() => {
-        html.style.scrollBehavior = temp;
-      }, 0);
-    },
-  },
+    handleTocClick(e) {
+      // 找到被点击的 <a> 标签
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      // 获取 href 属性中的 hash 部分（例如 "#顺序存储结构的地址计算方法"）
+      const href = link.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+
+      const hash = href.slice(1); // 去掉开头的 #
+      const targetElement = document.getElementById(hash);
+      if (targetElement) {
+        e.preventDefault(); // 阻止默认的锚点跳转（避免与自定义滚动冲突）
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        // 同步更新地址栏 hash，但不触发路由导航
+        history.pushState(null, null, '#' + hash);
+      }
+    }
+  }
 };
 </script>
 

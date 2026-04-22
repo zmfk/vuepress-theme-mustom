@@ -1,119 +1,119 @@
 module.exports = {
 
-  sitename: 'Mark の Personal Website',
+  sitename: "SuiMu's Personal Website", 
 
   notfound: {
     caption: '404',
-    text: 'Page [:path:] not found.'
+    text: 'Page [:path:] not found, maybe it never existed ๑乛◡乛๑'  
   },
 
   visibilitychange: {
-    away: '╭(°A°`)╮ Opps, page crashes~ ',
-    back: '(ฅ>ω<*ฅ) Eh, restore again~ '
+    away: '╭(°A°`)╮ Page crashes~ ',
+    back: '(ฅ>ω<*ฅ) Eh, it\'s back~ '
   },
 
   footer: {
     copyright: '© [:start_year:] - [:build_year:] [:author:]',
     powered: 'Powered by [:vuepress:]',
-    themed: 'Theme [:theme:] By [:author:]',
+    themed: 'Theme [:theme:] By [:author:], maintained by SuiMu, thanks to original author jinyaoMa',
     pv: 'Site total page views',
     uv: 'Site total visitors',
     wd: 'Site total word count',
-    license: 'Creative Commons Attribution-Noncommercial-ShareAlike 4.0 International license'
+    license: 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License'
   },
 
   brand: {
-    caption: 'CARD',
+    caption: 'Dog ๑乛◡乛๑ Card',  
     pstCount: 'Count of Posts',
     catCount: 'Count of Categories',
     tagCount: 'Count of Tags'
   },
 
   skins: {
-    caption: 'SKIN',
+    caption: 'Skin',
     names: {
       default: 'Default',
-      whiteblack: 'White & Black',
-      jshine: 'JShine',
-      memariani: 'Memariani'
+      whiteblack: 'Black & White',
+      jshine: 'Colorful',
+      memariani: 'Dark Color'
     }
   },
 
   settings: {
-    caption: 'SETTINGS',
+    caption: 'Settings',
     names: {
-      nightshift: 'Night Shift',
+      nightshift: 'Night Mode',
       nocanvas: 'Disable Canvas',
-      language: '简体中文'
+      language: 'English'
     }
   },
 
   panels: {
     captions: {
-      categories: 'CATEGORIES',
-      tags: 'TAGS'
+      categories: 'Categories',
+      tags: 'Tags'
     }
   },
 
   audioplayer: {
-    caption: 'PLAYLIST'
+    caption: 'Playlist ๑乛◡乛๑'
   },
 
   translate: {
-    tooltip: 'Highlight words to translate - Supported by Baidu Translation API',
-    copytip: 'Click to copy highlighted content above translation bar',
+    tooltip: 'Highlight to translate - Powered by Baidu Translate API',
+    copytip: 'Click to copy highlighted content',
     result: 'Translation Result',
     copied: 'Copied!',
     zh: '中文',
     en: 'English',
     jp: '日本語',
     error: {
-      empty: 'ERROR: QUERY IS EMPTY',
-      huge: 'ERROR: QUERY IS TOO LONG',
-      wrong: 'ERROR: BAIDU TRANSLATION API CRASH'
+      empty: 'Warning! No highlighted text detected ๑乛◡乛๑',
+      huge: 'Warning! The highlighted text is too long ๑乛◡乛๑',
+      wrong: 'Warning! Baidu Translate API crashed ๑乛◡乛๑'
     }
   },
 
   hitokoto: {
-    caption: 'HITOKOTO'
+    caption: 'Hitokoto'
   },
 
   recent: {
-    caption: 'RECENT POSTS',
-    more: 'MORE POSTS'
+    caption: 'Recent Posts',
+    more: 'More Posts'
   },
 
   comment: {
-    caption: 'COMMENTS'
+    caption: 'Comments & Messages'
   },
 
   timeline: {
-    caption: 'POST ARCHIVE',
-    yearTotal: 'have [:total:] posts written this year'
+    caption: 'Post Archive',
+    yearTotal: 'Total [:total:] posts written'
   },
 
   article: {
-    caption: 'PAGE CONTENT',
-    minuteUnit: '[:time:] min.',
+    caption: 'Page Content',
+    minuteUnit: '[:time:] min',
     ending: {
       left: 'The post above ended',
-      right: 'Thanks for your reading'
+      right: 'Thanks for reading'
     },
     friend: {
-      text: 'Come on! Write some comments, and your suggestions will improve the quality of my creative!',
-      button: 'FRIEND ME'
+      text: 'Please leave a comment, your suggestions will greatly improve my creative quality!',
+      button: 'Friend Me'
     },
     license: {
-      author: 'Post Author:',
-      link: 'Post Link:',
-      copyright: 'Copyright Notice:',
+      author: 'Author:',
+      link: 'Link:',
+      copyright: 'Copyright:',
       notice: {
         name: '<i class="fab fa-creative-commons"></i> BY-NC-SA',
-        text: 'All articles/posts in this website are licensed under [:license:] unless stating additionally.'
+        text: 'All articles on this site are licensed under [:license:] unless otherwise stated. Please credit the source!'
       }
     },
-    prev: 'Older Post: ',
-    next: 'Newer Post: ',
+    prev: 'Previous: ',
+    next: 'Next: ',
     readmode: {
       open: 'Enable Read Mode',
       close: 'Disable Read Mode'
@@ -121,7 +121,7 @@ module.exports = {
   },
 
   toc: {
-    caption: 'TABLE OF CONTENTS'
+    caption: 'Table of Contents'
   },
 
   records: {
@@ -129,14 +129,14 @@ module.exports = {
     labels: {
       type: 'Type: ',
       source: 'Link/Source: ',
-      author: 'Author/Relevent: ',
+      author: 'Author/Relevant: ',
       progress: 'Progress: ',
       summary: 'Summary: '
     },
     types: {
       book: 'Book',
       article: 'Article',
-      paper: 'Papaer',
+      paper: 'Paper',
       newspaper: 'Newspaper',
       report: 'Report',
       picture: 'Picture',
@@ -150,17 +150,17 @@ module.exports = {
   },
 
   readme: {
-    caption: 'UPDATES',
-    more: 'MORE',
-    less: 'LESS'
+    caption: 'Updates',
+    more: 'More',
+    less: 'Less'
   },
 
   stack: {
-    caption: 'CODE STACK'
+    caption: 'Code Stack'
   },
 
   iframe: {
-    caption: 'ICON FRAME'
+    caption: 'Icon Frame'
   },
 
   clustrmaps: {

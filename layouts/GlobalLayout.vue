@@ -316,14 +316,15 @@ export default {
             el.top >= window.scrollY &&
             el.top < window.scrollY + window.innerHeight - 160 // 160 = (64px for header + 16px for 1rem) * 2
           ) {
-            if (el.hash !== this.$route.hash) {
-              this.$vuepress.$set("disableScrollBehavior", true);
-              this.$router.replace(decodeURIComponent(el.hash), () => {
-                this.$nextTick(() => {
-                  this.$vuepress.$set("disableScrollBehavior", false);
-                });
-              });
-            }
+            // 注释掉自动更新 hash 的逻辑，避免干扰目录点击跳转 --zm
+            // if (el.hash !== this.$route.hash) {
+            //   this.$vuepress.$set("disableScrollBehavior", true);
+            //   this.$router.replace(decodeURIComponent(el.hash), () => {
+            //     this.$nextTick(() => {
+            //       this.$vuepress.$set("disableScrollBehavior", false);
+            //     });
+            //   });
+            // }
             break;
           }
         }

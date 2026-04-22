@@ -19,25 +19,29 @@ import decode from "../utils/decode";
 
 export default {
   name: "Comment",
-  components: {
-    CommentPlugin: Comment,
-  },
+  components: { CommentPlugin: Comment },
   computed: {
     options() {
-      if (this.$themeConfig.comment.isEncoded) {
-        const secret = decode(this.$themeConfig.comment.secret);
+      const commentConfig = this.$themeConfig.comment || {};
+      if (commentConfig.platform) {
+        return { ...commentConfig, locale: this.mustom$Lang };
+      }
+      if (commentConfig.isEncoded) {
+        const secret = decode(commentConfig.secret);
         return {
-          locale: this.mustom$Lang,
+          service: 'vssue',
+          owner: commentConfig.owner,
+          repo: commentConfig.repo,
           clientId: secret.appid,
-          clientSecret: secret.appkey
-        };
-      } else {
-        return {
-          locale: this.mustom$Lang,
+          clientSecret: secret.appkey,
+          prefix: commentConfig.prefix,
+          labels: commentConfig.labels,
+          locale: this.mustom$Lang
         };
       }
-    },
-  },
+      return { locale: this.mustom$Lang };
+    }
+  }
 };
 </script>
 
