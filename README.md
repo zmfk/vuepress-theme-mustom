@@ -2,36 +2,39 @@
 
 <div align="center">
 
-Simple design theme for VuePress，Blog，耀 の 个人网站 | Mark の Personal Website (QQ Group: 595614161)
+Simple design theme for VuePress，Blog，SuiMu's THINGSHOUSE | 醉梦 の 置物处 (QQ: 2272909403)
 
 </div>
 
 <div align="center">
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/jinyaoMa/vuepress-theme-mustom?style=flat-square) ![License](https://img.shields.io/github/license/jinyaoMa/vuepress-theme-mustom?style=flat-square)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) 
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zmfk/vuepress-theme-mustom?style=flat-square) 
+![License](https://img.shields.io/github/license/zmfk/vuepress-theme-mustom?style=flat-square)
 
 </div>
 
-![preview](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/preview.jpg?raw=true)
+<!-- TODO: Add actual preview image when available -->
+![preview](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/preview.jpg?raw=true)
 
-Sample: [vuepress-theme-mustom-sample](https://github.com/jinyaoMa/vuepress-theme-mustom-sample)
+Sample: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample) <!-- TODO: Add sample repo when available -->
 
 Language:
-- [中文](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/README.zh.md)
-- [English](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/README.md)
+- [中文](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.zh.md)
+- [English](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.md)
 
-> **If you still feel confused after reading this documentation, please read and learn how my `$docs` is structured [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs), or welcome to ask me questions via Github Issues.**
+> **If you still feel confused after reading this documentation, please read and learn how my `docs` is structured [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs), or welcome to ask me questions via Github Issues. You can also contact me via QQ: 2272909403.**
 
 > **Any Bug reports or suggestions can be posted into Github Issues in any format.**
 
 # Installation
 
-Create a folder with structure as below, and for detailed source folder structure `$docs`, see [\$docs](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs). `_posts` folder refers to [\$docs/_posts](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/_posts).
+Create a folder with structure as below, and for detailed source folder structure `docs`, see [docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs). `_posts` folder refers to [docs/_posts](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/_posts).
 
 ```yml
 # inside the new folder of your site
 
-+ $docs # folder contains source of your site
++ docs # folder contains source of your site
   - _posts # folder contains posts
   - .vuepress # folder contains static source and config
     + public # folder contains static source
@@ -41,17 +44,19 @@ Create a folder with structure as below, and for detailed source folder structur
 
 Run one of the following commands in the new folder of your site to install `vuepress` and `vuepress-theme-mustom`.
 
+# Install directly from GitHub (recommended, since the theme is not published to npm yet)
+
 ```bash
-yarn add @jinyaoma/vuepress-theme-mustom -D
+yarn add @zmfk/vuepress-theme-mustom -D //
 ```
 
 or with npm
 
 ```bash
-npm i @jinyaoma/vuepress-theme-mustom -D
+npm i @zmfk/vuepress-theme-mustom -D
 ```
 
-or manually download the clone `.zip` file [here](https://github.com/jinyaoMa/vuepress-theme-mustom/archive/master.zip), and extract the theme source code to the new folder of your site. Then, set `theme` attribute of `config.js` as below.
+or manually download the clone `.zip` file [here](https://github.com/zmfk/vuepress-theme-mustom/archive/master.zip), and extract the theme source code to the new folder of your site. Then, set `theme` attribute of `config.js` as below.
 
 ```js
 theme: require.resolve('../../vuepress-theme-mustom-master/')
@@ -60,20 +65,20 @@ theme: require.resolve('../../vuepress-theme-mustom-master/')
 After installation succeeded, your site should be run on `localhost` using the command below.
 
 ```bash
-vuepress dev \$docs
+vuepress dev docs
 ```
 
-or built into `$docs/.vuepress/dist`
+or built into `docs/.vuepress/dist`
 
 ```bash
-vuepress build \$docs
+vuepress build docs
 ```
 
 > Note: The backward slash ("\\") above is an escape character here while typing commands in command line or terminal.
 
 # Explanation of `_secret.tpl.js`
 
-To see how my `_secret.tpl.js` looks like, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/.vuepress/_secret.tpl.js).
+To see how my `_secret.tpl.js` looks like, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/_secret.tpl.js).
 
 Using a secret config file, any `appid` and `appkey` can be stored locally and referred to `config.js` as showed below.
 
@@ -94,7 +99,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
 
 # Explanation of `config.js`
 
-To see how my `config.js` looks like, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/.vuepress/config.js).
+To see how my `config.js` looks like, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/config.js).
 
 ## General VuePress Settings
 
@@ -104,9 +109,9 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   // theme: require.resolve('../../'), // My value
   // manually download theme, and folder `vuepress-theme-mustom-master` is in the root of the project
   // theme: require.resolve('../../vuepress-theme-mustom-master/'),
-  theme: '@jinyaoma/vuepress-theme-mustom', // Your value
+  theme: '@zmfk/vuepress-theme-mustom', // Your value
   // Site base
-  // base: '/', // My value, due to https://ma-jinyao.cn/
+  // base: '/', // My value, due to https://zmfk.github.io/
   base: '/MyBlog/', // Your value, if https://yourUsername.github.io/MyBlog/
   // Default title that appended to your site title
   // title: '耀 の 个人网站 | Mark の Personal Website', // My value
@@ -120,8 +125,8 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   }
 
   // It isn't necessary to change 'head' if you want to replace files directly
-  // favicon is in folder $docs/.vuepress/public/
-  // apple-touch-icon is in folder $docs/.vuepress/public/assets/img/
+  // favicon is in folder docs/.vuepress/public/
+  // apple-touch-icon is in folder docs/.vuepress/public/assets/img/
   head: [
     // PWA settings, https://www.vuepress.cn/plugin/official/plugin-pwa.html
     ['link', { rel: 'icon', href: '/favicon.ico', type: "image/x-icon" }],
@@ -144,8 +149,8 @@ module.exports = { // https://www.vuepress.cn/zh/config/
     if (process.env.NODE_ENV === 'production') {
       return {
         output: {
-          // My value, username=jinyaoMa, repo=vuepress-theme-mustom, branch=gh-pages
-          //publicPath: 'https://cdn.jsdelivr.net/gh/jinyaoMa/vuepress-theme-mustom@gh-pages/'
+          // My value, username=zmfk, repo=vuepress-theme-mustom, branch=gh-pages
+          //publicPath: 'https://cdn.jsdelivr.net/gh/zmfk/vuepress-theme-mustom@gh-pages/'
           // Your value, if username=XXX, repo=MyBlog, branch=gh-pages
           publicPath: 'https://cdn.jsdelivr.net/gh/XXX/MyBlog@gh-pages/'
         }
@@ -179,12 +184,12 @@ images: { // for image replacment; no base needed; first layer key points to com
 
 This attribute is for sitemap generation **ONLY**.
 
-- My value: `'https://ma-jinyao.cn'`
+- My value: `'https://zmfk.github.io'`
 - Your Value: `'https://yourdomain.com/'`
 
 ### clustrmaps
 
-![clustrmaps](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/clustrmaps.jpg?raw=true)
+![clustrmaps](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/clustrmaps.jpg?raw=true)
 
 Set `clustrmaps` to `null` or ignore it to disable above. This requires service from [clustrmaps.com](https://clustrmaps.com/).
 
@@ -209,7 +214,7 @@ customBackgrounds: [
 
 ### socialShare
 
-![socialShare](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/socialShare.jpg?raw=true)
+![socialShare](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/socialShare.jpg?raw=true)
 
 Looking to [this](https://sns.goyfe.com/guide/) for reference. The following example generates the result of above.
 
@@ -224,7 +229,7 @@ socialShare: { // https://sns.goyfe.com/guide/
 
 ### notification
 
-![notification](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/notification.jpg?raw=true)
+![notification](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/notification.jpg?raw=true)
 
 > `msg` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -244,7 +249,7 @@ notification: [
 
 ### qrcodes
 
-![qrcodes](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true)
+![qrcodes](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true)
 
 > `locale` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -268,7 +273,7 @@ qrcodes: [{ // qrcode for contact and friending
 
 ### header
 
-![header](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/header.jpg?raw=true)
+![header](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/header.jpg?raw=true)
 
 > `sitename` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -277,15 +282,15 @@ qrcodes: [{ // qrcode for contact and friending
 ```js
 header: {
   sitename: [
-    '耀 の 个人网站', // zh
-    'Mark の Personal Website' // en
+    '醉梦 の 个人网站', // zh
+    'SuiMu の Personal Website' // en
   ]
 },
 ```
 
 ### brand
 
-![brand](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/brand.jpg?raw=true)
+![brand](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/brand.jpg?raw=true)
 
 > `signatures` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -299,16 +304,16 @@ brand: {
   ],
   contacts: [{
     icon: '<i class="fab fa-github fa-fw"></i>',
-    text: 'jinyaoMa',
-    link: 'https://github.com/jinyaoMa'
+    text: 'zmfk',
+    link: 'https://github.com/zmfk'
   }, {
     icon: '<i class="fas fa-envelope fa-fw"></i>',
-    text: 'jinyao.ma@outlook.com',
-    link: 'mailto://jinyao.ma@outlook.com'
+    text: '2272709403@qq.com',
+    link: 'mailto://2272909403@qq.com'
   }, {
     icon: '<i class="fab fa-qq fa-fw"></i>',
-    text: '907881445',
-    link: 'tencent://Message/?uin=907881445'
+    text: '2272909403',
+    link: 'tencent://Message/?uin=2272909403'
   }]
 },
 ```
@@ -319,12 +324,12 @@ brand: {
 
 `caption` and `text` contain both string in `zh` and `en`.
 
-You can erase some of the items. This attribute isn't necessary to be edited if you have the same structure as my [\$docs](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs).
+You can erase some of the items. This attribute isn't necessary to be edited if you have the same structure as my [docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs).
 
 ```yml
 # inside the new folder of your site
 
-+ $docs # folder contains source of your site
++ docs # folder contains source of your site
   - _posts # folder contains posts, 'Home' and 'Archive' pages are auto-generated
   - .vuepress # folder contains static source and config
   - about # 'About' page
@@ -428,23 +433,19 @@ menus: [{
 
 ### meting
 
-![meting](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/meting.jpg?raw=true)
+![meting](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/meting.jpg?raw=true)
 
 The following example generates the result of above.
 
 ```js
 meting: {
-  server: 'netease', // netease, tencent, kugou, xiami, baidu
-  type: 'playlist', // song, playlist, album, search, artist
-  id: '4989572738', // song id / playlist id / album id / search keyword
-  theme: 'var(--link)', // e.g. #ff3300
-  height: '297px' // playlist height, 297px ==> 9 lines
+  //delete
 },
 ```
 
 ### portals
 
-![portals](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/portals.jpg?raw=true)
+![portals](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/portals.jpg?raw=true)
 
 The following example generates the result of above.
 
@@ -452,40 +453,10 @@ The following example generates the result of above.
 // external links; use for the component that displays after clicking on the left-top button of header
 portals: [{
   name: 'My Site',
-  desc: '耀 の 个人网站 | Mark の Personal Website',
-  icon: 'https://jinyaoMa.github.io/asset/img/author.medium.png',
-  link: 'https://jinyaoMa.github.io/'
-}, {
-  name: 'MPlayer',
-  desc: 'APlayer 个人模仿练习版',
-  icon: 'https://blog.ma-jinyao.cn/asset/img/icon.medium.png',
-  link: 'https://blog.ma-jinyao.cn/MPlayer'
-}, {
-  name: 'Resume',
-  desc: 'Resume Template',
-  icon: 'https://blog.ma-jinyao.cn/extension/resume/icon.png',
-  link: 'https://blog.ma-jinyao.cn/extension/resume/english/'
-}, {
-  name: '简历',
-  desc: '简历模板',
-  icon: 'https://blog.ma-jinyao.cn/extension/resume/icon.reverse.png',
-  link: 'https://blog.ma-jinyao.cn/extension/resume/chinese/'
-}, {
-  name: 'Cover Letter',
-  desc: 'Cover Letter Template',
-  icon: 'https://blog.ma-jinyao.cn/extension/letter/icon.png',
-  link: 'https://blog.ma-jinyao.cn/extension/letter/english/'
-}, {
-  name: '求职信',
-  desc: '求职信模板',
-  icon: 'https://blog.ma-jinyao.cn/extension/letter/icon.reverse.png',
-  link: 'https://blog.ma-jinyao.cn/extension/letter/chinese/'
-}, {
-  name: 'Palette',
-  desc: '想知道图片主题色？',
-  icon: 'https://blog.ma-jinyao.cn/extension/palette/icon.png',
-  link: 'https://blog.ma-jinyao.cn/extension/palette/'
-}],
+  desc: '醉梦 の 个人网站 | SuiMu の Personal Website',
+  icon: 'https://zmfk.github.io/asset/img/author.medium.png',
+  link: 'https://zmfk.github.io/'
+}, ],
 ```
 
 ### hitokoto
@@ -504,7 +475,7 @@ hitokoto: {
 
 ### gallery
 
-You can add online images to gallery page, and they will be inserted to very top of the page and following by your local images that are auto appended. Local images are located at `/$docs/.vuepress/public/gallery`. To see mine, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/.vuepress/public/gallery).
+You can add online images to gallery page, and they will be inserted to very top of the page and following by your local images that are auto appended. Local images are located at `/docs/.vuepress/public/gallery`. To see mine, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/public/gallery).
 
 ```js
 gallery: [/*{ format; these gallery items will be appended to /gallery/ page
@@ -560,7 +531,7 @@ updated: 2020-12-12 00:00:00
 
 ## Front-Matter for Normal Pages
 
-Example from my 'About' page, or to look at the original `index.md` file, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/about/index.md).
+Example from my 'About' page, or to look at the original `index.md` file, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/about/index.md).
 
 ```yml
 ---
@@ -570,7 +541,7 @@ title: 关于 | About
 
 ### Want to have a page similar to my 'Records' page?
 
-Follow the format as showed below, or to look at the original `index.md` file of my 'Records' page, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/records/index.md).
+Follow the format as showed below, or to look at the original `index.md` file of my 'Records' page, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/records/index.md).
 
 ```yml
 ---
@@ -596,9 +567,9 @@ records:
 
 ### Want to have a page similar to my 'Code Library' page?
 
-> To see how the Code Library structured in a Github Repository, refer to [jinyaoMa/code-lib](https://github.com/jinyaoMa/code-lib)
+> To see how the Code Library structured in a Github Repository, refer to [zmfk/code-lib](https://github.com/zmfk/code-lib)
 
-Follow the format as showed below, or to look at the original `index.md` file of my 'Code Library' page, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/codes/index.md).
+Follow the format as showed below, or to look at the original `index.md` file of my 'Code Library' page, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/codes/index.md).
 
 ```yml
 ---
@@ -615,9 +586,9 @@ github:
 
 ### Want to have a page similar to my 'Icon Font Library' page?
 
-> To see how the Icon Font Library structured in a Github Repository, refer to [jinyaoMa/icon-lib](https://github.com/jinyaoMa/icon-lib)
+> To see how the Icon Font Library structured in a Github Repository, refer to [zmfk/icon-lib](https://github.com/zmfk/icon-lib)
 
-Follow the format as showed below, or to look at the original `index.md` file of my 'Icon Font Library' page, click [here](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/icons/index.md).
+Follow the format as showed below, or to look at the original `index.md` file of my 'Icon Font Library' page, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/icons/index.md).
 
 ```yml
 ---
@@ -629,6 +600,6 @@ github:
     enabled: true # set this to true to enable Readme component
   iframe:
     enabled: true # set this to true to enable Iframe component
-    url: https://blog.ma-jinyao.cn/icon-lib/ # subpage should be in same-origin
+    url: https://blog.ma-jinyao.cn/icon-lib/ # subpage should be in same-origin  //not change
 ---
 ```

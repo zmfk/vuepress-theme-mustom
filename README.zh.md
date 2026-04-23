@@ -22,13 +22,13 @@ Simple design theme for VuePress，Blog，醉梦 の 置物处 | SuiMu's THINGSH
 - [中文](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.zh.md)
 - [English](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.md)
 
-> **当你看完本文档之后，如果还是感觉不会不清楚，请仔细研究我 [\docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs) 的目录结构，或者也可以在 Github Issues 里面放出你的问题，我有空就回复。最好是加本人 QQ：2272909403。**
+> **当你看完本文档之后，如果还是感觉不会不清楚，请仔细研究我 [docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs) 的目录结构，或者也可以在 Github Issues 里面放出你的问题，我有空就回复。最好是加本人 QQ：2272909403。**
 
 > **要是主题出 Bug 了或者有什么建议想提，可以发到 Github Issues 里，不用在意什么报告的格式啥的。当然最好加本人 QQ：2272909403。**
 
 # 安装
 
-创建以下结构的文件夹，如果想看 `docs` 的详细结构，点这里 [\docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs)。`_posts` 文件夹请参考 [\docs/_posts](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/_posts)。
+创建以下结构的文件夹，如果想看 `docs` 的详细结构，点这里 [docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs)。`_posts` 文件夹请参考 [docs/_posts](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/_posts)。
 
 ```yml
 # 在创建的新文件夹里
@@ -438,11 +438,7 @@ menus: [{
 
 ```js
 meting: {
-  server: 'netease', // netease, tencent, kugou, xiami, baidu
-  type: 'playlist', // song, playlist, album, search, artist
-  id: '4989572738', // song id / playlist id / album id / search keyword
-  theme: 'var(--link)', // e.g. #ff3300
-  height: '297px' // playlist height, 297px ==> 9 lines
+  //已经移除
 },
 ```
 
