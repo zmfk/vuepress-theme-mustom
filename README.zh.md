@@ -2,36 +2,38 @@
 
 <div align="center">
 
-Simple design theme for VuePress，Blog，耀 の 个人网站 | Mark の Personal Website (QQ Group: 595614161)
+Simple design theme for VuePress，Blog，醉梦 の 置物处 | SuiMu's THINGSHOUSE (QQ: 2272909403)
 
 </div>
 
 <div align="center">
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/jinyaoMa/vuepress-theme-mustom?style=flat-square) ![License](https://img.shields.io/github/license/jinyaoMa/vuepress-theme-mustom?style=flat-square)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) 
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zmfk/vuepress-theme-mustom?style=flat-square) 
+![License](https://img.shields.io/github/license/zmfk/vuepress-theme-mustom?style=flat-square)
 
 </div>
 
-![preview](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/preview.jpg?raw=true)
+![preview](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/preview.jpg?raw=true)  //空 --zm
 
-例子: [vuepress-theme-mustom-sample](https://github.com/jinyaoMa/vuepress-theme-mustom-sample)
+例子: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample)  //空 --zm
 
 文档语言:
-- [中文](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/README.zh.md)
-- [English](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/README.md)
+- [中文](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.zh.md)
+- [English](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.md)
 
-> **当你看完本文档之后，如果还是感觉不会不清楚，请仔细研究我 [\$docs](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs) 的目录结构，或者也可以在 Github Issues 里面放出你的问题，我有空就回复。最好是加 QQ 群：595614161。**
+> **当你看完本文档之后，如果还是感觉不会不清楚，请仔细研究我 [\docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs) 的目录结构，或者也可以在 Github Issues 里面放出你的问题，我有空就回复。最好是加本人 QQ：2272909403。**
 
-> **要是主题出 Bug 了或者有什么建议想提，可以发到 Github Issues 里，不用在意什么报告的格式啥的。当然最好加 QQ 群：595614161。**
+> **要是主题出 Bug 了或者有什么建议想提，可以发到 Github Issues 里，不用在意什么报告的格式啥的。当然最好加本人 QQ：2272909403。**
 
 # 安装
 
-创建以下结构的文件夹，如果想看 `$docs` 的详细结构，点这里 [\$docs](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs)。`_posts` 文件夹请参考 [\$docs/_posts](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/_posts)。
+创建以下结构的文件夹，如果想看 `docs` 的详细结构，点这里 [\docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs)。`_posts` 文件夹请参考 [\docs/_posts](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/_posts)。
 
 ```yml
 # 在创建的新文件夹里
 
-+ $docs # 放网站资源
++ docs # 放网站资源
   - _posts # 放文章资源
   - .vuepress # 放静态资源和配置
     + public # 放静态资源
@@ -42,16 +44,16 @@ Simple design theme for VuePress，Blog，耀 の 个人网站 | Mark の Person
 在新文件夹中运行一下其中一个命令，安装 `vuepress` 和 `vuepress-theme-mustom`。
 
 ```bash
-yarn add @jinyaoma/vuepress-theme-mustom -D
+yarn add @zmfk/vuepress-theme-mustom -D  #无法使用，没上传  --zm
 ```
 
 或使用 npm
 
 ```bash
-npm i @jinyaoma/vuepress-theme-mustom -D
+npm i @zmfk/vuepress-theme-mustom -D  #无法使用，没上传  --zm
 ```
 
-或点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/archive/master.zip) 手动下载并解压主题文件夹到上一步的新建文件夹。接着对照下方代码设置 `config.js` 中属性 `theme`。
+或点 [这里](https://github.com/zmfk/vuepress-theme-mustom/archive/master.zip) 手动下载并解压主题文件夹到上一步的新建文件夹。接着对照下方代码设置 `config.js` 中属性 `theme`。
 
 ```js
 theme: require.resolve('../../vuepress-theme-mustom-master/')
@@ -60,20 +62,18 @@ theme: require.resolve('../../vuepress-theme-mustom-master/')
 安装成功后，使用以下命令运行到 `localhost`。
 
 ```bash
-vuepress dev \$docs
+vuepress dev docs
 ```
 
-或者生成到 `$docs/.vuepress/dist`
+或者生成到 `docs/.vuepress/dist`
 
 ```bash
-vuepress build \$docs
+vuepress build docs
 ```
-
-> 注意：上面命令里的反斜杠（“\\”）属于转义符，用于在命令行或终端里对特殊符号进行转义。
 
 # 简单讲解 `_secret.tpl.js`
 
-想看我的 `_secret.tpl.js` 长啥样可以点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/.vuepress/_secret.tpl.js)。
+想看我的 `_secret.tpl.js` 长啥样可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/_secret.tpl.js)。
 
 使用一个分离的保密文件的话，`appid` 和 `appkey` 什么的就不用上传到线上，有一些保密作用吧。可以参照以下代码在 `config.js` 引用保密文件。
 
@@ -94,7 +94,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
 
 # 简单讲解 `config.js`
 
-想看我的 `config.js` 长啥样可以点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/.vuepress/config.js)。
+想看我的 `config.js` 长啥样可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/config.js)。
 
 > 很多代码太长就不翻译了 ~ 习惯了代码里写英文，这是病，以后要改。。。
 
@@ -106,7 +106,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   // theme: require.resolve('../../'), // My value
   // manually download theme, and folder `vuepress-theme-mustom-master` is in the root of the project
   // theme: require.resolve('../../vuepress-theme-mustom-master/'),
-  theme: '@jinyaoma/vuepress-theme-mustom', // Your value
+  theme: '@zmfk/vuepress-theme-mustom', // Your value         //未发布，无用 --zm
   // Site base
   // base: '/', // My value, due to https://ma-jinyao.cn/
   base: '/MyBlog/', // Your value, if https://yourUsername.github.io/MyBlog/
@@ -122,8 +122,8 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   }
 
   // It isn't necessary to change 'head' if you want to replace files directly
-  // favicon is in folder $docs/.vuepress/public/
-  // apple-touch-icon is in folder $docs/.vuepress/public/assets/img/
+  // favicon is in folder docs/.vuepress/public/
+  // apple-touch-icon is in folder docs/.vuepress/public/assets/img/
   head: [
     // PWA settings, https://www.vuepress.cn/plugin/official/plugin-pwa.html
     ['link', { rel: 'icon', href: '/favicon.ico', type: "image/x-icon" }],
@@ -181,19 +181,19 @@ images: { // for image replacment; no base needed; first layer key points to com
 
 **这个属性只用于 sitemap 的生成**
 
-- 我的设置值: `'https://ma-jinyao.cn'`
+- 我的设置值: `'https://zmfk.github.io'`
 - 你可以设置成: `'https://yourdomain.com/'`
 
 ### clustrmaps
 
-![clustrmaps](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/clustrmaps.jpg?raw=true)
+![clustrmaps](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/clustrmaps.jpg?raw=true)
 
 设置 `clustrmaps` 为 `null` 或者直接删掉它可以关掉这访问监测组件。这个组件需要 [clustrmaps.com](https://clustrmaps.com/) 的服务，就是要注册一下。
 
 ```js
 clustrmaps: {
   id: "clustrmaps", // clstr_globe / clustrmaps
-  src="//clustrmaps.com/map_v2.js?d=4GkUWi6kMFx7OEpmT7qdm46V1jK1tYkT5M-9Euo0FFM&cl=ffffff&w=a"
+  src="//clustrmaps.com/map_v2.js?d=4GkUWi6kMFx7OEpmT7qdm46V1jK1tYkT5M-9Euo0FFM&cl=ffffff&w=a" //例子，需要替换
 },
 ```
 
@@ -213,14 +213,14 @@ customBackgrounds: [
 
 ### socialShare
 
-![socialShare](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/socialShare.jpg?raw=true)
+![socialShare](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/socialShare.jpg?raw=true)
 
 参考 [这里](https://sns.goyfe.com/guide/) 来设置。以下代码会生成上图的结果。
 
 ```js
 socialShare: { // https://sns.goyfe.com/guide/
   networks: ['qq', 'weibo', 'douban', 'email', 'whatsapp', 'facebook', 'reddit', 'telegram', 'line'],
-  email: 'jinyao.ma@outlook.com',
+  email: '2272909403@qq.com',
   fallbackImage: '/assets/img/avatar.png',
   noGlobalSocialShare: true
 },
@@ -228,7 +228,7 @@ socialShare: { // https://sns.goyfe.com/guide/
 
 ### notification
 
-![notification](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/notification.jpg?raw=true)
+![notification](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/notification.jpg?raw=true)
 
 > `msg` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -236,10 +236,10 @@ socialShare: { // https://sns.goyfe.com/guide/
 
 ```js
 notification: [
-  { // welcome msg
+  { // welcome msghaimeiyou
     type: 'default', // default or warning or error
     msg: [
-      '<strong>欢迎来到我的个人网站！技术交流请加 QQ 群：595614161，也可以加本人QQ：907881445，或者点击页面左下角扫码找我哦~<strong>', // zh
+      '<strong>欢迎来到我的个人网站！技术交流请加 QQ 群：还没有喵，也可以加本人QQ：2272909403，或者点击页面左下角扫码找我哦~<strong>', // zh
       '<strong>Welcome to my personal website! <strong>' // en
     ]
   },
@@ -248,7 +248,7 @@ notification: [
 
 ### qrcodes
 
-![qrcodes](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true)
+![qrcodes](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true)
 
 > `locale` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -272,7 +272,7 @@ qrcodes: [{ // qrcode for contact and friending
 
 ### header
 
-![header](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/header.jpg?raw=true)
+![header](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/header.jpg?raw=true)
 
 > `sitename` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -281,15 +281,15 @@ qrcodes: [{ // qrcode for contact and friending
 ```js
 header: {
   sitename: [
-    '耀 の 个人网站', // zh
-    'Mark の Personal Website' // en
+    '<em><span>醉梦 の</span></em><strong><span>置物处</span></strong>', // zh
+    '<em><span>SuiMu\'s</span></em><strong><span>THINGSHOUSE</span></strong>' //en 
   ]
 },
 ```
 
 ### brand
 
-![brand](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/brand.jpg?raw=true)
+![brand](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/brand.jpg?raw=true)
 
 > `signatures` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -298,21 +298,21 @@ header: {
 ```js
 brand: {
   signatures: [
-    '我只想安静地做笔记', // zh
-    'I just wanna note silently' // en
+    '我行即我思 , 我思即我<br>&nbsp;', // zh
+    'I act, therefore I think;<br>  I think, therefore I am.<br>&nbsp;' // en
   ],
   contacts: [{
     icon: '<i class="fab fa-github fa-fw"></i>',
-    text: 'jinyaoMa',
-    link: 'https://github.com/jinyaoMa'
+    text: 'zmfk',
+    link: 'https://github.com/zmfk'
   }, {
     icon: '<i class="fas fa-envelope fa-fw"></i>',
-    text: 'jinyao.ma@outlook.com',
-    link: 'mailto://jinyao.ma@outlook.com'
+    text: '2272909403@qq.com',
+    link: 'mailto://2272909403@qq.com'
   }, {
     icon: '<i class="fab fa-qq fa-fw"></i>',
-    text: '907881445',
-    link: 'tencent://Message/?uin=907881445'
+    text: '2272909403',
+    link: 'tencent://Message/?uin=2272909403'
   }]
 },
 ```
@@ -323,12 +323,12 @@ brand: {
 
 `caption` 和 `text` 必需按顺序存放中英文的字符串。
 
-你可以删除某些链接。如果你有一个跟我一样的 [\$docs](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs) 目录结构，那这个属性不必要改。
+你可以删除某些链接。如果你有一个跟我一样的 [docs](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs) 目录结构，那这个属性不必要改。
 
 ```yml
 # 在创建的新文件夹里
 
-+ $docs # 放网站资源
++ docs # 放网站资源
   - _posts # 放文章资源，自动生成“主页”和“归档”页面
   - .vuepress # 放静态资源和配置
   - about # “关于”页面
@@ -432,7 +432,7 @@ menus: [{
 
 ### meting
 
-![meting](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/meting.jpg?raw=true)
+![meting](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/meting.jpg?raw=true) //需要修改 --zm
 
 以下代码会生成上图的结果。
 
@@ -448,7 +448,7 @@ meting: {
 
 ### portals
 
-![portals](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$screenshots/portals.jpg?raw=true)
+![portals](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/portals.jpg?raw=true)
 
 以下代码会生成上图的结果。
 
@@ -456,39 +456,10 @@ meting: {
 // external links; use for the component that displays after clicking on the left-top button of header
 portals: [{
   name: 'My Site',
-  desc: '耀 の 个人网站 | Mark の Personal Website',
-  icon: 'https://jinyaoMa.github.io/asset/img/author.medium.png',
-  link: 'https://jinyaoMa.github.io/'
+  desc: '醉梦 の 个人网站 | SuiMu の Personal Website',
+  icon: 'https://zmfk.github.io/asset/img/author.medium.png',
+  link: 'https://zmfk.github.io/'
 }, {
-  name: 'MPlayer',
-  desc: 'APlayer 个人模仿练习版',
-  icon: 'https://blog.ma-jinyao.cn/asset/img/icon.medium.png',
-  link: 'https://blog.ma-jinyao.cn/MPlayer'
-}, {
-  name: 'Resume',
-  desc: 'Resume Template',
-  icon: 'https://blog.ma-jinyao.cn/extension/resume/icon.png',
-  link: 'https://blog.ma-jinyao.cn/extension/resume/english/'
-}, {
-  name: '简历',
-  desc: '简历模板',
-  icon: 'https://blog.ma-jinyao.cn/extension/resume/icon.reverse.png',
-  link: 'https://blog.ma-jinyao.cn/extension/resume/chinese/'
-}, {
-  name: 'Cover Letter',
-  desc: 'Cover Letter Template',
-  icon: 'https://blog.ma-jinyao.cn/extension/letter/icon.png',
-  link: 'https://blog.ma-jinyao.cn/extension/letter/english/'
-}, {
-  name: '求职信',
-  desc: '求职信模板',
-  icon: 'https://blog.ma-jinyao.cn/extension/letter/icon.reverse.png',
-  link: 'https://blog.ma-jinyao.cn/extension/letter/chinese/'
-}, {
-  name: 'Palette',
-  desc: '想知道图片主题色？',
-  icon: 'https://blog.ma-jinyao.cn/extension/palette/icon.png',
-  link: 'https://blog.ma-jinyao.cn/extension/palette/'
 }],
 ```
 
@@ -510,7 +481,7 @@ hitokoto: {
 
 ### gallery
 
-你可以添加线上的图片到图库页面。添加的图片会置顶显示，接着才是自动检测的本地图片。本地图片都是凡在 `/$docs/.vuepress/public/gallery` 中，点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/.vuepress/public/gallery) 看我是怎么样子放的。
+你可以添加线上的图片到图库页面。添加的图片会置顶显示，接着才是自动检测的本地图片。本地图片都是凡在 `/docs/.vuepress/public/gallery` 中，点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/public/gallery) 看我是怎么样子放的。
 
 ```js
 gallery: [/*{ format; these gallery items will be appended to /gallery/ page
@@ -566,7 +537,7 @@ updated: 2020-12-12 00:00:00
 
 ## 普通页面 Front-Matter
 
-从我的“关于”页面找的例子，或者查看原 `index.md` 文件可以点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/about/index.md)。
+从我的“关于”页面找的例子，或者查看原 `index.md` 文件可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/about/index.md)。
 
 ```yml
 ---
@@ -576,7 +547,7 @@ title: 关于 | About
 
 ### 想要做和我的“记录”页面相似的页面？
 
-根据以下格式写代码，或者查看我的“记录”页面原 `index.md` 文件可以点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/records/index.md)。
+根据以下格式写代码，或者查看我的“记录”页面原 `index.md` 文件可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/records/index.md)。
 
 ```yml
 ---
@@ -602,9 +573,10 @@ records:
 
 ### 想要做和我的“代码库”页面相似的页面？
 
-> 代码库在 Github 仓库中的结构可以参考 [jinyaoMa/code-lib](https://github.com/jinyaoMa/code-lib)
+> 代码库在 Github 仓库中的结构可以参考 [zmfk/code-lib](https://github.com/jinyaoMa/code-lib)   
+//未做 --zm
 
-根据以下格式写代码，或者查看我的“代码库”页面原 `index.md` 文件可以点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/codes/index.md)。
+根据以下格式写代码，或者查看我的“代码库”页面原 `index.md` 文件可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/codes/index.md)。
 
 ```yml
 ---
@@ -621,9 +593,10 @@ github:
 
 ### 想要做和我的“图标字体库”页面相似的页面？
 
-> 图标字体库在 Github 仓库中的结构可以参考 [jinyaoMa/icon-lib](https://github.com/jinyaoMa/icon-lib)
+> 图标字体库在 Github 仓库中的结构可以参考 [zmfk/icon-lib](https://github.com/zmfk/icon-lib)
+//未做 --zm
 
-根据以下格式写代码，或者查看我的“图标字体库”页面原 `index.md` 文件可以点 [这里](https://github.com/jinyaoMa/vuepress-theme-mustom/blob/master/$docs/icons/index.md)。
+根据以下格式写代码，或者查看我的“图标字体库”页面原 `index.md` 文件可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/icons/index.md)。
 
 ```yml
 ---
@@ -635,6 +608,6 @@ github:
     enabled: true # set this to true to enable Readme component
   iframe:
     enabled: true # set this to true to enable Iframe component
-    url: https://blog.ma-jinyao.cn/icon-lib/ # subpage should be in same-origin
+    url: https://blog.ma-jinyao.cn/icon-lib/ # subpage should be in same-origin   //未改  --zm
 ---
 ```
