@@ -20,8 +20,8 @@ module.exports = {
   translate: { // 百度翻译 API
     isEncoded: true,
     secret: encode(
-      "", // appid
-      "" //appkey
+      "YOUR_BAIDU_APPID", // appid
+      "YOUR_BAIDU_APPKEY" //appkey
     )
   }
 };

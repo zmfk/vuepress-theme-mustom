@@ -21,9 +21,6 @@ jobs:
           cp docs/.vuepress/_secret.tpl.js docs/.vuepress/_secret.js
           sed -i "s|YOUR_BAIDU_APPID|${{ secrets.BAIDU_APPID }}|g" docs/.vuepress/_secret.js
           sed -i "s|YOUR_BAIDU_APPKEY|${{ secrets.BAIDU_APPKEY }}|g" docs/.vuepress/_secret.js
-          sed -i "s|YOUR_GISCUS_CLIENT_ID|${{ secrets.GISCUS_CLIENT_ID }}|g" docs/.vuepress/_secret.js
-          sed -i "s|YOUR_GISCUS_CLIENT_SECRET|${{ secrets.GISCUS_CLIENT_SECRET }}|g" docs/.vuepress/_secret.js
-          sed -i "s|YOUR_GISCUS_INSTALLATION_ID|${{ secrets.GISCUS_INSTALLATION_ID }}|g" docs/.vuepress/_secret.js
 
       - name: Install dependencies
         run: npm install
