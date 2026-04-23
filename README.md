@@ -221,7 +221,7 @@ Looking to [this](https://sns.goyfe.com/guide/) for reference. The following exa
 ```js
 socialShare: { // https://sns.goyfe.com/guide/
   networks: ['qq', 'weibo', 'douban', 'email', 'whatsapp', 'facebook', 'reddit', 'telegram', 'line'],
-  email: 'jinyao.ma@outlook.com',
+  email: '2272909403.com',
   fallbackImage: '/assets/img/avatar.png',
   noGlobalSocialShare: true
 },
@@ -240,7 +240,7 @@ notification: [
   { // welcome msg
     type: 'default', // default or warning or error
     msg: [
-      '<strong>欢迎来到我的个人网站！技术交流请加 QQ 群：595614161，也可以加本人QQ：907881445，或者点击页面左下角扫码找我哦~<strong>', // zh
+      '<strong>欢迎来到我的个人网站！技术交流请加 QQ 群：还没有喵，也可以加本人QQ：2272909403，或者点击页面左下角扫码找我哦~<strong>', // zh
       '<strong>Welcome to my personal website! <strong>' // en
     ]
   },
@@ -249,7 +249,7 @@ notification: [
 
 ### qrcodes
 
-![qrcodes](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true)
+![qrcodes](‘https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true’)
 
 > `locale` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -299,8 +299,8 @@ header: {
 ```js
 brand: {
   signatures: [
-    '我只想安静地做笔记', // zh
-    'I just wanna note silently' // en
+    '我行即我思 , 我思即我<br>&nbsp;', // zh
+    'I act, therefore I think;<br>  I think, therefore I am.<br>&nbsp;' // en
   ],
   contacts: [{
     icon: '<i class="fab fa-github fa-fw"></i>',
