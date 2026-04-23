@@ -193,7 +193,7 @@ images: { // for image replacment; no base needed; first layer key points to com
 ```js
 clustrmaps: {
   id: "clustrmaps", // clstr_globe / clustrmaps
-  src: "//cdn.clustrmaps.com/map_v2.js?cl=333333&w=a&t=t&d=kuCCiVvtASTqmAMxPSTLcjxs-p8j6ht3LUi9z9Q-OKc&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=333333"
+  src="//clustrmaps.com/map_v2.js?d=4GkUWi6kMFx7OEpmT7qdm46V1jK1tYkT5M-9Euo0FFM&cl=ffffff&w=a"
 },
 ```
 
