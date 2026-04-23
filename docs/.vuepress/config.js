@@ -1,11 +1,6 @@
 // 路径拼接导入 --zm
 const path = require('path');
-
 const secret = require("./_secret");
-
-
-
-
 
 module.exports = {
   // https://www.vuepress.cn/zh/config/
@@ -235,12 +230,6 @@ module.exports = {
         icon: "/assets/img/avatar.png",
         link: "/"
       },
-      {
-        name: "Palette",
-        desc: "想知道图片主题色？",
-        icon: "https://jinyaoma.github.io/Palette/icon.png",
-        link: "https://jinyaoma.github.io/Palette/"
-      },
     ],
     hitokoto: {
       customs: [
@@ -353,10 +342,6 @@ module.exports = {
 
   // 2. 配置 Webpack 别名（解决 @theme 找不到的问题） --zm
   configureWebpack: (config) => {
-
-  // 添加日志用于调试，确认 configureWebpack 是否被调用，以及 @theme 别名设置是否正确 --zm
-  // console.log('>>> configureWebpack 被调用！');
-  // console.log('>>> @theme alias 将被设置为:', path.resolve(__dirname, '../../'));
 
   // 设置别名 @theme 指向主题根目录
   config.resolve.alias['@theme'] = path.resolve(__dirname, '../../');
