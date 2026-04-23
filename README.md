@@ -15,7 +15,7 @@ Simple design theme for VuePress，Blog，SuiMu's THINGSHOUSE | 醉梦 の 置�
 </div>
 
 <!-- TODO: Add actual preview image when available -->
-![preview](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/preview.jpg?raw=true)
+![preview](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/preview.jpg)
 
 Sample: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample) <!-- TODO: Add sample repo when available -->
 
@@ -189,7 +189,7 @@ This attribute is for sitemap generation **ONLY**.
 
 ### clustrmaps
 
-![clustrmaps](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/clustrmaps.jpg?raw=true)
+![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustommaster/screenshots/clustrmaps.jpg)
 
 Set `clustrmaps` to `null` or ignore it to disable above. This requires service from [clustrmaps.com](https://clustrmaps.com/).
 
@@ -214,7 +214,7 @@ customBackgrounds: [
 
 ### socialShare
 
-![socialShare](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/socialShare.jpg?raw=true)
+![socialShare](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/refs/heads/master/screenshots/socialShare.jpg)
 
 Looking to [this](https://sns.goyfe.com/guide/) for reference. The following example generates the result of above.
 
@@ -229,7 +229,7 @@ socialShare: { // https://sns.goyfe.com/guide/
 
 ### notification
 
-![notification](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/notification.jpg?raw=true)
+![notification](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/notification.jpg)
 
 > `msg` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -249,7 +249,7 @@ notification: [
 
 ### qrcodes
 
-![qrcodes](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/qrcodes.jpg?raw=true)
+![qrcodes](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/qrcodes.jpg)
 
 > `locale` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -273,7 +273,7 @@ qrcodes: [{ // qrcode for contact and friending
 
 ### header
 
-![header](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/header.jpg?raw=true)
+![header](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/header.jpg)
 
 > `sitename` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -290,7 +290,7 @@ header: {
 
 ### brand
 
-![brand](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/brand.jpg?raw=true)
+![brand](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/brand.jpg)
 
 > `signatures` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
@@ -433,7 +433,7 @@ menus: [{
 
 ### meting
 
-![meting](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/meting.jpg?raw=true)
+![meting](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/meting.jpg)
 
 The following example generates the result of above.
 
@@ -445,7 +445,7 @@ meting: {
 
 ### portals
 
-![portals](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/portals.jpg?raw=true)
+![portals](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/portals.jpg)
 
 The following example generates the result of above.
 

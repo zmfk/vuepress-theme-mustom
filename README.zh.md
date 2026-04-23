@@ -14,7 +14,7 @@ Simple design theme for VuePress，Blog，醉梦 の 置物处 | SuiMu's THINGSH
 
 </div>
 
-![preview](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/preview.jpg?raw=true)  //空 --zm
+![preview](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/preview.jpg)  //空 --zm
 
 例子: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample)  //空 --zm
 
@@ -186,7 +186,7 @@ images: { // for image replacment; no base needed; first layer key points to com
 
 ### clustrmaps
 
-![clustrmaps](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/clustrmaps.jpg?raw=true)
+![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/clustrmaps.jpg)
 
 设置 `clustrmaps` 为 `null` 或者直接删掉它可以关掉这访问监测组件。这个组件需要 [clustrmaps.com](https://clustrmaps.com/) 的服务，就是要注册一下。
 
@@ -213,7 +213,7 @@ customBackgrounds: [
 
 ### socialShare
 
-![socialShare](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/socialShare.jpg?raw=true)
+![socialShare](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/socialShare.jpg)
 
 参考 [这里](https://sns.goyfe.com/guide/) 来设置。以下代码会生成上图的结果。
 
@@ -228,7 +228,7 @@ socialShare: { // https://sns.goyfe.com/guide/
 
 ### notification
 
-![notification](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/notification.jpg?raw=true)
+![notification](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/notification.jpg)
 
 > `msg` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -248,7 +248,7 @@ notification: [
 
 ### qrcodes
 
-![qrcodes](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/qrcodes.jpg?raw=true)
+![qrcodes](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/qrcodes.jpg)
 
 > `locale` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -272,7 +272,7 @@ qrcodes: [{ // qrcode for contact and friending
 
 ### header
 
-![header](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/header.jpg?raw=true)
+![header](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/header.jpg)
 
 > `sitename` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -289,7 +289,7 @@ header: {
 
 ### brand
 
-![brand](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/brand.jpg?raw=true)
+![brand](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/brand.jpg)
 
 > `signatures` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
@@ -432,7 +432,7 @@ menus: [{
 
 ### meting
 
-![meting](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/meting.jpg?raw=true) //需要修改 --zm
+![meting](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/meting.jpg) //需要修改 --zm
 
 以下代码会生成上图的结果。
 
@@ -444,7 +444,7 @@ meting: {
 
 ### portals
 
-![portals](https://github.com/zmfk/vuepress-theme-mustom/blob/master/screenshots/portals.jpg?raw=true)
+![portals](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/portals.jpg)
 
 以下代码会生成上图的结果。
 
