@@ -2,13 +2,13 @@
 title: 关于 | About
 ---
 
-![Image About Me](/gallery/FaceQwQ.png)
+![Image About Me](/gallery/FaceQwQ.png)*I am so cute =w=*
 
 <!-- more -->
 
 Hello everyone!
 
-Welcome to [My*I am so cute =w=* Personal Website](/)!
+Welcome to [My Personal Website](/)!
 
 Here I collect all sorts of things.
 
