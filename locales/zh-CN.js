@@ -164,7 +164,7 @@ module.exports = { // placeholder [::]
   },
 
   clustrmaps: {
-    caption: 'Clustrmaps'
+    caption: '访客地图'
   }
 
 }

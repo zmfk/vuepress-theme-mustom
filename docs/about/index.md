@@ -26,11 +26,11 @@ Does "no requirements" count as a requirement? xD
 
 没有要求，主打一个随缘 : D
 
-没有要求算不算一种要求 xD
+“没有要求” 算不算一种要求 xD
 
 # Information About Me / 关于我的信息
 
-- Nickname: SuiMu / ZuiMeng / indugleInDreams
+- Nickname: SuiMu / ZuiMeng / ZuiMengFanKong / indugleInDreams / zmfk
 - Current Occupation: Student
 - Field of Study: Software Development
 - Current Residence: China
@@ -39,7 +39,7 @@ Does "no requirements" count as a requirement? xD
 
 ---
 
-- 昵称：酔夢 / 醉梦 / indugleInDreams
+- 昵称：酔夢 / 醉梦 / 醉梦繁空 / indugleInDreams 
 - 目前职业：学生
 - 专业：软件开发
 - 目前居住地：中国

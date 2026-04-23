@@ -14,9 +14,9 @@ Simple design theme for VuePress，Blog，醉梦 の 置物处 | SuiMu's THINGSH
 
 </div>
 
-![preview](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/preview.jpg)  //空 --zm
+![preview](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/preview.jpg)  
 
-例子: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample)  //空 --zm
+例子: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample) 
 
 文档语言:
 - [中文](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.zh.md)
