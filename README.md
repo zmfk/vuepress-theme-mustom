@@ -249,7 +249,7 @@ notification: [
 
 ### qrcodes
 
-![qrcodes](‘https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true’)
+![qrcodes](https://github.com/zmfk/vuepress-theme-mustom/blob/master/$screenshots/qrcodes.jpg?raw=true)
 
 > `locale` strings should be in current sequence/index. 0 => `zh`, 1 => `en`
 
