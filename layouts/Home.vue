@@ -17,8 +17,7 @@ export default {
     return {
       giscusIframe: null,
       currentTheme: null,
-      giscusReady: false,
-      giscusLoading: false
+      giscusReady: false
     };
   },
   computed: {
@@ -34,10 +33,7 @@ export default {
   },
   mounted() {
     this.currentTheme = this.effectiveTheme;
-    // 延迟加载，确保页面主体已渲染，避免阻塞
-    this.$nextTick(() => {
-      this.loadGiscus();
-    });
+    this.loadGiscus();
   },
   watch: {
     "$route.path"() {
@@ -51,9 +47,7 @@ export default {
     },
     currentLang(newLang, oldLang) {
       if (newLang !== oldLang) {
-        if (this.giscusLoading) {
-          this.loadGiscus();
-        } else if (this.giscusReady) {
+        if (this.giscusReady) {
           this.updateGiscusLang(newLang);
         } else {
           this.loadGiscus();
@@ -71,7 +65,7 @@ export default {
     loadGiscus() {
       const container = this.$refs.giscusContainer;
       if (!container) return;
-      container.innerHTML = '';
+      container.innerHTML = "";
 
       const oldScript = document.querySelector('script[src="https://giscus.app/client.js"]');
       if (oldScript) oldScript.remove();
@@ -91,84 +85,37 @@ export default {
       script.setAttribute("crossorigin", "anonymous");
       script.async = true;
 
-      this.giscusReady = false;
-      this.giscusLoading = true;
-
       script.onload = () => {
-        try {
-          this.$nextTick(() => {
-            const iframe = this.getGiscusIframe();
-            if (iframe) {
-              this.giscusIframe = iframe;
-              this.giscusReady = true;
-            }
-          });
-        } catch (e) {
-          console.error("Giscus onload error:", e);
-        } finally {
-          this.giscusLoading = false;
-        }
+        this.$nextTick(() => {
+          if (this.getGiscusIframe()) {
+            this.giscusReady = true;
+          }
+        });
       };
 
-      script.onerror = (err) => {
-        console.warn("Giscus script failed to load:", err);
-        this.giscusLoading = false;
-      };
-
-      try {
-        container.appendChild(script);
-      } catch (e) {
-        console.error("Failed to append Giscus script:", e);
-        this.giscusLoading = false;
-      }
-
-      // 本地开发代理（仅开发环境）
-      if (process.env.NODE_ENV === "development") {
-        try {
-          const originalFetch = window.fetch;
-          window.fetch = function(url, options) {
-            let newUrl = url;
-            if (url.includes("api.github.com")) {
-              newUrl = url.replace("https://api.github.com", "/github-api");
-            } else if (url.includes("giscus.app/api")) {
-              newUrl = url.replace("https://giscus.app/api", "/giscus-api/api");
-            }
-            return originalFetch.call(this, newUrl, options);
-          };
-        } catch (e) {
-          console.warn("Failed to patch fetch for dev:", e);
-        }
-      }
+      container.appendChild(script);
+      this.giscusReady = false;
     },
 
     updateGiscusTheme(theme) {
-      try {
-        const iframe = this.getGiscusIframe();
-        if (iframe && iframe.contentWindow) {
-          iframe.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          );
-        }
-      } catch (e) {
-        console.warn("Giscus theme update failed:", e);
+      const iframe = this.getGiscusIframe();
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
       }
     },
 
     updateGiscusLang(lang) {
-      try {
-        const iframe = this.getGiscusIframe();
-        if (iframe && iframe.contentWindow) {
-          iframe.contentWindow.postMessage(
-            { giscus: { setConfig: { lang } } },
-            "https://giscus.app"
-          );
-        } else {
-          this.giscusReady = false;
-          this.loadGiscus();
-        }
-      } catch (e) {
-        console.warn("Giscus lang update failed:", e);
+      const iframe = this.getGiscusIframe();
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage(
+          { giscus: { setConfig: { lang } } },
+          "https://giscus.app"
+        );
+      } else {
+        // 如果 iframe 丢失，回退到重新加载
         this.giscusReady = false;
         this.loadGiscus();
       }
