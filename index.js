@@ -243,11 +243,11 @@ module.exports = (themeConfig, context) => {
         log: false,
         live2d: {
           enable: true,
-          model: "haruto",
+          model: "z16",
           display: {
             position: "right",
             width: 180,
-            height: 270,
+            height: 300,
             hOffset: 48,
             vOffset: 0
           },
