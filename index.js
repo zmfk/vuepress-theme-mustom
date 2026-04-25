@@ -206,27 +206,27 @@ module.exports = (themeConfig, context) => {
     ],
     [
       // https://github.com/JoeyBling/vuepress-plugin-helper-live2d
-      // "vuepress-plugin-helper-live2d",
-      // {
-      //   log: false,
-      //   live2d: {
-      //     enable: true,
-      //     model: "haruto",
-      //     display: {
-      //       position: "right",
-      //       width: 180,
-      //       height: 270,
-      //       hOffset: 48,
-      //       vOffset: 0
-      //     },
-      //     mobile: {
-      //       show: false
-      //     },
-      //     react: {
-      //       opacity: 1
-      //     }
-      //   }
-      // }
+      "vuepress-plugin-helper-live2d",
+      {
+        log: false,
+        live2d: {
+          enable: true,
+          model: "haruto",
+          display: {
+            position: "right",
+            width: 180,
+            height: 270,
+            hOffset: 48,
+            vOffset: 0
+          },
+          mobile: {
+            show: false
+          },
+          react: {
+            opacity: 1
+          }
+        }
+      }
     ],
     [
       // https://sns.goyfe.com/guide/
