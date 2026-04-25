@@ -1,3 +1,4 @@
+const blogPlugin = require('@vuepress/plugin-blog');
 const md5 = require("md5");
 const path = require("path");
 const fs = require("fs");
@@ -64,6 +65,37 @@ const generateGallery = (context) => {
   return result;
 };
 
+const patchedBlogPlugin = (options, ctx) => {
+  // 1. 补全 options 中可能缺失的对象/数组
+  options.services = options.services || [];
+  options.pageFilters = options.pageFilters || {};
+  options.pageSorters = options.pageSorters || {};
+
+  const plugin = blogPlugin(options, ctx);
+
+  // 2. 包裹 clientDynamicModules，确保 ctx 中需要的数组/对象都存在
+  if (plugin.clientDynamicModules) {
+    const original = plugin.clientDynamicModules;
+    plugin.clientDynamicModules = async (...args) => {
+      // 自动补全所有以 Pagination/Pages 结尾的数组属性
+      Object.keys(ctx).forEach(key => {
+        if (/(Pagination|Pages)$/.test(key) && ctx[key] === undefined) {
+          ctx[key] = [];
+        }
+      });
+      // 精确补全 clientDynamicModules 内直接使用的属性
+      if (!ctx.frontmatterClassificationPages) ctx.frontmatterClassificationPages = [];
+      if (!ctx.serializedPaginations) ctx.serializedPaginations = [];
+      if (!ctx.pageFilters) ctx.pageFilters = {};
+      if (!ctx.pageSorters) ctx.pageSorters = {};
+
+      return original.apply(plugin, args);
+    };
+  }
+
+  return plugin;
+};
+
 module.exports = (themeConfig, context) => {
   const gallery = generateGallery(context);
 
@@ -121,7 +153,7 @@ module.exports = (themeConfig, context) => {
   const plugins = [
     [
       // https://vuepress-plugin-blog.ulivz.com/
-      "@vuepress/blog",
+      patchedBlogPlugin,
       {
         directories: [
           {

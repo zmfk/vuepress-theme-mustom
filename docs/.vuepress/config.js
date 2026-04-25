@@ -296,7 +296,7 @@ module.exports = {
     [
       "meta",
       {
-        name: "apple-mobile-web-app-capable",
+        name: "apple-mobile-app-capable",
         content: "yes"
       }
     ],
