@@ -10,30 +10,29 @@ import Article from "@theme/components/Article";
 
 export default {
   name: "Post",
-  components: { Article },
+  components: {
+    Article,
+  },
   data() {
     return {
       giscusIframe: null,
-      currentTheme: null,
-      giscusReady: false   // 新增：标记 Giscus 是否已成功加载
+      currentTheme: null // 将在 mounted 中初始化
     };
   },
   computed: {
+    // 核心：根据当前皮肤和夜间模式计算 Giscus 主题
     effectiveTheme() {
       const skin = this.mustom$Skin;
       const isNight = this.mustom$IsNight;
+      // 夜间模式或暗彩皮肤使用 dark，否则 light
       if (isNight || skin === 'memariani') {
         return 'dark';
       }
       return 'light';
-    },
-    // 新增：根据全局语言计算 Giscus 界面语言
-    currentLang() {
-      const lang = this.mustom$Lang;
-      return lang && lang.startsWith("zh") ? "zh-CN" : "en";
     }
   },
   mounted() {
+    // 初始化当前主题
     this.currentTheme = this.effectiveTheme;
     this.loadGiscus();
   },
@@ -41,20 +40,11 @@ export default {
     '$route.path'() {
       this.loadGiscus();
     },
+    // 监听 effectiveTheme 的变化，一旦变化就更新 Giscus
     effectiveTheme(newTheme) {
       if (this.currentTheme !== newTheme) {
         this.currentTheme = newTheme;
         this.updateGiscusTheme(newTheme);
-      }
-    },
-    // 新增：监听语言变化，实现无刷新切换 Giscus 界面语言
-    currentLang(newLang, oldLang) {
-      if (newLang !== oldLang) {
-        if (this.giscusReady) {
-          this.updateGiscusLang(newLang);
-        } else {
-          this.loadGiscus();
-        }
       }
     }
   },
@@ -77,26 +67,22 @@ export default {
       script.setAttribute('data-strict', '0');
       script.setAttribute('data-reactions-enabled', '0');
       script.setAttribute('data-emit-metadata', '0');
-      script.setAttribute('data-input-position', 'bottom');   
+      script.setAttribute('data-input-position', 'bottom');
       script.setAttribute('data-theme', this.currentTheme);
-      script.setAttribute('data-lang', this.currentLang);     // 改为动态语言
+      script.setAttribute('data-lang', 'zh-CN');
       script.setAttribute('crossorigin', 'anonymous');
       script.async = true;
       
       script.onload = () => {
         this.$nextTick(() => {
           const iframe = container.querySelector('iframe.giscus-frame');
-          if (iframe) {
-            this.giscusIframe = iframe;
-            this.giscusReady = true;   // 新增：标记已就绪
-          }
+          if (iframe) this.giscusIframe = iframe;
         });
       };
       
       container.appendChild(script);
-      this.giscusReady = false;        // 新增：重置标记，等待新 iframe 加载
 
-      // 本地开发代理（仅开发环境）—— 保留原有功能，不做任何改动
+      // 本地开发代理（仅开发环境）
       if (process.env.NODE_ENV === 'development') {
         const originalFetch = window.fetch;
         window.fetch = function(url, options) {
@@ -115,18 +101,6 @@ export default {
         this.giscusIframe.contentWindow.postMessage({
           giscus: { setConfig: { theme } }
         }, 'https://giscus.app');
-      }
-    },
-    // 新增：无刷新切换 Giscus 语言
-    updateGiscusLang(lang) {
-      if (this.giscusIframe && this.giscusIframe.contentWindow) {
-        this.giscusIframe.contentWindow.postMessage({
-          giscus: { setConfig: { lang } }
-        }, 'https://giscus.app');
-      } else {
-        // 如果 iframe 丢失，回退到重新加载
-        this.giscusReady = false;
-        this.loadGiscus();
       }
     }
   }
