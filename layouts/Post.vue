@@ -16,7 +16,7 @@ export default {
       giscusIframe: null,
       currentTheme: null,
       giscusReady: false,
-      giscusLoading: false   // 新增：标记评论区是否正在加载
+      giscusLoading: false   // 标记评论区是否正在加载
     };
   },
   computed: {
@@ -32,7 +32,9 @@ export default {
   },
   mounted() {
     this.currentTheme = this.effectiveTheme;
-    this.loadGiscus();
+    this.$nextTick(() => {
+      this.loadGiscus();
+    });
   },
   watch: {
     "$route.path"() {
@@ -47,13 +49,10 @@ export default {
     currentLang(newLang, oldLang) {
       if (newLang !== oldLang) {
         if (this.giscusLoading) {
-          // 正在加载中，放弃当前加载，以新语言重新开始
           this.loadGiscus();
         } else if (this.giscusReady) {
-          // 已就绪，快速切换
           this.updateGiscusLang(newLang);
         } else {
-          // 尚未开始加载
           this.loadGiscus();
         }
       }
@@ -69,7 +68,7 @@ export default {
     loadGiscus() {
       const container = this.$refs.giscusContainer;
       if (!container) return;
-      container.innerHTML = "";   // 清空容器，中止任何正在进行的加载
+      container.innerHTML = "";
 
       const oldScript = document.querySelector('script[src="https://giscus.app/client.js"]');
       if (oldScript) oldScript.remove();
@@ -90,60 +89,84 @@ export default {
       script.setAttribute("crossorigin", "anonymous");
       script.async = true;
 
-      this.giscusReady = false;   // 重置就绪状态
-      this.giscusLoading = true;  // 标记加载中
+      this.giscusReady = false;
+      this.giscusLoading = true;
 
       script.onload = () => {
-        this.$nextTick(() => {
-          const iframe = this.getGiscusIframe();
-          if (iframe) {
-            this.giscusIframe = iframe;
-            this.giscusReady = true;
-          }
+        try {
+          this.$nextTick(() => {
+            const iframe = this.getGiscusIframe();
+            if (iframe) {
+              this.giscusIframe = iframe;
+              this.giscusReady = true;
+            }
+          });
+        } catch (e) {
+          console.warn("Giscus onload error:", e);
+        } finally {
           this.giscusLoading = false;
-        });
+        }
       };
 
       script.onerror = () => {
+        console.warn("Giscus script failed to load");
         this.giscusLoading = false;
       };
 
-      container.appendChild(script);
+      try {
+        container.appendChild(script);
+      } catch (e) {
+        console.error("Failed to append Giscus script:", e);
+        this.giscusLoading = false;
+      }
 
-      // 本地开发代理（仅开发环境）—— 保留原有功能
+      // 本地开发代理（仅开发环境）
       if (process.env.NODE_ENV === "development") {
-        const originalFetch = window.fetch;
-        window.fetch = function(url, options) {
-          let newUrl = url;
-          if (url.includes("api.github.com")) {
-            newUrl = url.replace("https://api.github.com", "/github-api");
-          } else if (url.includes("giscus.app/api")) {
-            newUrl = url.replace("https://giscus.app/api", "/giscus-api/api");
-          }
-          return originalFetch.call(this, newUrl, options);
-        };
+        try {
+          const originalFetch = window.fetch;
+          window.fetch = function(url, options) {
+            let newUrl = url;
+            if (url.includes("api.github.com")) {
+              newUrl = url.replace("https://api.github.com", "/github-api");
+            } else if (url.includes("giscus.app/api")) {
+              newUrl = url.replace("https://giscus.app/api", "/giscus-api/api");
+            }
+            return originalFetch.call(this, newUrl, options);
+          };
+        } catch (e) {
+          console.warn("Failed to patch fetch for dev:", e);
+        }
       }
     },
 
     updateGiscusTheme(theme) {
-      const iframe = this.getGiscusIframe();
-      if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage(
-          { giscus: { setConfig: { theme } } },
-          "https://giscus.app"
-        );
+      try {
+        const iframe = this.getGiscusIframe();
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          );
+        }
+      } catch (e) {
+        console.warn("Giscus theme update failed:", e);
       }
     },
 
     updateGiscusLang(lang) {
-      const iframe = this.getGiscusIframe();
-      if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage(
-          { giscus: { setConfig: { lang } } },
-          "https://giscus.app"
-        );
-      } else {
-        // 意外情况：iframe 丢失，回退到重新加载
+      try {
+        const iframe = this.getGiscusIframe();
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { lang } } },
+            "https://giscus.app"
+          );
+        } else {
+          this.giscusReady = false;
+          this.loadGiscus();
+        }
+      } catch (e) {
+        console.warn("Giscus lang update failed:", e);
         this.giscusReady = false;
         this.loadGiscus();
       }
