@@ -1,5 +1,6 @@
 <template>
   <div class="Archive">
+    <Happyday />
     <Timeline />
     <div class="giscus-container" ref="giscusContainer"></div>
   </div>
@@ -7,10 +8,11 @@
 
 <script>
 import Timeline from "@theme/components/Timeline";
+import Happyday from "@theme/components/Happyday";
 
 export default {
   name: "Archive",
-  components: { Timeline },
+  components: { Timeline, Happyday },
   data() {
     return {
       giscusIframe: null,

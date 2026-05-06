@@ -1,5 +1,6 @@
 <template>
   <div class="Home">
+    <Happyday />
     <Hitokoto />
     <Recent />
     <div class="giscus-container" ref="giscusContainer"></div>
@@ -9,10 +10,11 @@
 <script>
 import Hitokoto from "@theme/components/Hitokoto";
 import Recent from "@theme/components/Recent";
+import Happyday from "@theme/components/Happyday";
 
 export default {
   name: "Home",
-  components: { Hitokoto, Recent },
+  components: { Hitokoto, Recent,  Happyday },
   data() {
     return {
       giscusIframe: null,

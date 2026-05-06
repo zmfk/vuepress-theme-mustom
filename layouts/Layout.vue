@@ -1,6 +1,6 @@
 <template>
   <div class="Layout">
-    <!-- author:jinyaoMa -->
+    <Happyday />
     <Article />
     <Gallery v-if="$frontmatter.gallery && $frontmatter.gallery.enabled" />
     <Records v-if="$frontmatter.records && $frontmatter.records.enabled" />
@@ -30,6 +30,7 @@ import Records from "@theme/components/Records";
 import Readme from "@theme/components/Readme";
 import Stack from "@theme/components/Stack";
 import Iframe from "@theme/components/Iframe";
+import Happyday from "@theme/components/Happyday";
 
 export default {
   name: "Layout",
@@ -40,6 +41,7 @@ export default {
     Readme,
     Stack,
     Iframe,
+    Happyday
   },
   data() {
     return {
