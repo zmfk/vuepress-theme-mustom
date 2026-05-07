@@ -7,5 +7,4 @@ github:
     enabled: true
   stack:
     enabled: true
-    # 等待修改  --zmfk
 ---

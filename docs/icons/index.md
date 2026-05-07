@@ -8,5 +8,4 @@ github:
   iframe:
     enabled: true
     url: https://zmfk.github.io/icon-lib/
-    # 等待修改  --zmfk
 ---
