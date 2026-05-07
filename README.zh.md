@@ -96,7 +96,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
 
 想看我的 `config.js` 长啥样可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/config.js)。
 
-> 很多代码太长就不翻译了 ~ 习惯了代码里写英文，这是病，以后要改。。。
+> 加油喵
 
 ## 普通 VuePress 设置
 
@@ -108,10 +108,10 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   // theme: require.resolve('../../vuepress-theme-mustom-master/'),
   theme: '@zmfk/vuepress-theme-mustom', // Your value         //未发布，无用 --zm
   // Site base
-  // base: '/', // My value, due to https://ma-jinyao.cn/
+  // base: '/', // My value, due to https://zmfk.github.io/
   base: '/MyBlog/', // Your value, if https://yourUsername.github.io/MyBlog/
   // Default title that appended to your site title
-  // title: '耀 の 个人网站 | Mark の Personal Website', // My value
+  // title: '醉梦 の 置物处 | SuiMu's THINGSHOUSE', // My value
   title: 'XXX 的博客 | XXX\'s Blog', // Your value
   // Default description that appended to your site description
   description: 'XXX 的博客, XXX\'s Blog, XXX, Mustom, VuePress',
@@ -146,10 +146,10 @@ module.exports = { // https://www.vuepress.cn/zh/config/
     if (process.env.NODE_ENV === 'production') {
       return {
         output: {
-          // My value, username=jinyaoMa, repo=vuepress-theme-mustom, branch=gh-pages
-          //publicPath: 'https://cdn.jsdelivr.net/gh/jinyaoMa/vuepress-theme-mustom@gh-pages/'
-          // Your value, if username=XXX, repo=MyBlog, branch=gh-pages
-          publicPath: 'https://cdn.jsdelivr.net/gh/XXX/MyBlog@gh-pages/'
+          // My value, username=zmfk, repo=zmfk.github.io, branch=master
+          //publicPath: 'https://cdn.jsdelivr.net/gh/zmfk/zmfk.github.io@master/'
+          // Your value, if username=XXX, repo=MyBlog, branch=master
+          publicPath: 'https://cdn.jsdelivr.net/gh/XXX/MyBlog@master/'
         }
       }
     }
@@ -184,6 +184,14 @@ images: { // for image replacment; no base needed; first layer key points to com
 - 我的设置值: `'https://zmfk.github.io'`
 - 你可以设置成: `'https://yourdomain.com/'`
 
+### year
+
+建站起始年份，用于页脚版权显示。例如：
+
+```js
+year: 2026,
+```
+
 ### clustrmaps
 
 ![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/clustrmaps.jpg)
@@ -198,8 +206,6 @@ clustrmaps: {
 ```
 
 ### customBackgrounds
-
-This attribute is for adding background images to the site under `skin-default`. If there are multiple images, they will be in slide show. You can have value looking like the below.
 
 这个属性可以让你添加背景图片，但只会在默认皮肤里显示。如果添加了多个背景图，就会以幻灯片播放的形式展示。你可以对照以下代码中的格式设置。
 
@@ -232,11 +238,11 @@ socialShare: { // https://sns.goyfe.com/guide/
 
 > `msg` 中字符串必须按照特定顺序/下标. 0 => `zh`, 1 => `en`
 
-你可以在进站时有多个通知弹出，并且它们会一个接一个的显示，不会同时显示。`msg` 必需按顺序存放中英文的字符串。以下代码会生成上图的结果。
+你可以在进站时有多个通知弹出，并且它们会一个接一个的显示，不会同时显示。type 可以为 'default'、'warning' 或 'error'（对应不同颜色）。`msg` 必需按顺序存放中英文的字符串。以下代码会生成上图的结果。
 
 ```js
 notification: [
-  { // welcome msghaimeiyou
+  { // welcome msg
     type: 'default', // default or warning or error
     msg: [
       '<strong>欢迎来到我的个人网站！技术交流请加 QQ 群：还没有喵，也可以加本人QQ：2272909403，或者点击页面左下角扫码找我哦~<strong>', // zh
@@ -308,7 +314,7 @@ brand: {
   }, {
     icon: '<i class="fas fa-envelope fa-fw"></i>',
     text: '2272909403@qq.com',
-    link: 'mailto://2272909403@qq.com'
+    link: 'mailto:2272909403@qq.com'
   }, {
     icon: '<i class="fab fa-qq fa-fw"></i>',
     text: '2272909403',
@@ -334,9 +340,7 @@ brand: {
   - about # “关于”页面
   - codes # “代码库”页面
   - icons # “图标字体库”页面
-  - letter # “求职信小贴士”页面
   - records # “记录”页面
-  - resume # “简历小贴士”页面
   # “图库”页面为自动生成
 ```
 
@@ -345,94 +349,53 @@ brand: {
 ```js
 menus: [{
   caption: [
-    '本站', // zh
-    'MAIN' // en
+    '菜单',   // zh
+    'MENU'    // en
   ],
   icon: '<i class="fas fa-sitemap fa-fw"></i>',
-  items: [{
-    icon: '<i class="fas fa-home fa-fw"></i>',
-    text: [
-      '首页', // zh
-      'Home' // en
-    ],
-    link: '/'
-  }, {
-    icon: '<i class="fas fa-archive fa-fw"></i>',
-    text: [
-      '归档', // zh
-      'Archive' // en
-    ],
-    link: '/archive/'
-  }, {
-    icon: '<i class="fas fa-user fa-fw"></i>',
-    text: [
-      '关于', // zh
-      'About' // en
-    ],
-    link: '/about/'
-  }]
-}, {
-  caption: [
-    '工作', // zh
-    'JOB RELATED' // en
-  ],
-  icon: '<i class="fas fa-briefcase fa-fw"></i>',
-  items: [{
-    icon: '<i class="fas fa-paper-plane fa-fw"></i>',
-    text: [
-      '简历小贴士', // zh
-      'Resume Tips' // en
-    ],
-    link: '/resume/'
-  }, {
-    icon: '<i class="fas fa-file-contract fa-fw"></i>',
-    text: [
-      '求职信小贴士', // zh
-      'Cover Letter Tips' // en
-    ],
-    link: '/letter/'
-  }]
-}, {
-  caption: [
-    '其他', // zh
-    'OTHERS' // en
-  ],
-  icon: '<i class="fas fa-ellipsis-h fa-fw"></i>',
-  items: [{
-    icon: '<i class="fas fa-box fa-fw"></i>',
-    text: [
-      '代码库', // zh
-      'Code Library' // en
-    ],
-    link: '/codes/'
-  }, {
-    icon: '<i class="fas fa-icons fa-fw"></i>',
-    text: [
-      '图标字体库', // zh
-      'Icon Font Library' // en
-    ],
-    link: '/icons/'
-  }, {
-    icon: '<i class="fas fa-edit fa-fw"></i>',
-    text: [
-      '记录', // zh
-      'Records' // en
-    ],
-    link: '/records/'
-  }, {
-    icon: '<i class="fas fa-images fa-fw"></i>',
-    text: [
-      '图库', // zh
-      'Gallery' // en
-    ],
-    link: '/gallery/'
-  }]
+  items: [
+    {
+      icon: '<i class="fas fa-home fa-fw"></i>',
+      text: ['首页', 'Home'],
+      link: '/'
+    },
+    {
+      icon: '<i class="fas fa-archive fa-fw"></i>',
+      text: ['归档', 'Archive'],
+      link: '/archive/'
+    },
+    {
+      icon: '<i class="fas fa-box fa-fw"></i>',
+      text: ['代码库', 'Code Library'],
+      link: '/codes/'
+    },
+    {
+      icon: '<i class="fas fa-icons fa-fw"></i>',
+      text: ['图标字体库', 'Icon Font Library'],
+      link: '/icons/'
+    },
+    {
+      icon: '<i class="fas fa-edit fa-fw"></i>',
+      text: ['记录', 'Records'],
+      link: '/records/'
+    },
+    {
+      icon: '<i class="fas fa-images fa-fw"></i>',
+      text: ['图库', 'Gallery'],
+      link: '/gallery/'
+    },
+    {
+      icon: '<i class="fas fa-user fa-fw"></i>',
+      text: ['关于', 'About'],
+      link: '/about/'
+    }
+  ]
 }],
 ```
 
 ### meting
 
-![meting](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/meting.jpg) //需要修改 --zm
+![meting](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/meting.jpg)
 
 以下代码会生成上图的结果。
 
@@ -451,10 +414,10 @@ meting: {
 ```js
 // external links; use for the component that displays after clicking on the left-top button of header
 portals: [{
-  name: 'My Site',
-  desc: '醉梦 の 个人网站 | SuiMu の Personal Website',
-  icon: 'https://zmfk.github.io/asset/img/author.medium.png',
-  link: 'https://zmfk.github.io/'
+  name: "My Site",
+        desc: "醉梦 の 个人网站 | SuiMu の Personal Website",
+        icon: "/assets/img/avatar.png",
+        link: "/"
 }, {
 }],
 ```
@@ -569,8 +532,7 @@ records:
 
 ### 想要做和我的“代码库”页面相似的页面？
 
-> 代码库在 Github 仓库中的结构可以参考 [zmfk/code-lib](https://github.com/jinyaoMa/code-lib)   
-//未做 --zm
+> 代码库在 Github 仓库中的结构可以参考 [zmfk/code-lib](https://github.com/zmfk/code-lib)   
 
 根据以下格式写代码，或者查看我的“代码库”页面原 `index.md` 文件可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/codes/index.md)。
 
@@ -590,7 +552,6 @@ github:
 ### 想要做和我的“图标字体库”页面相似的页面？
 
 > 图标字体库在 Github 仓库中的结构可以参考 [zmfk/icon-lib](https://github.com/zmfk/icon-lib)
-//未做 --zm
 
 根据以下格式写代码，或者查看我的“图标字体库”页面原 `index.md` 文件可以点 [这里](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/icons/index.md)。
 
@@ -604,6 +565,5 @@ github:
     enabled: true # set this to true to enable Readme component
   iframe:
     enabled: true # set this to true to enable Iframe component
-    url: https://blog.ma-jinyao.cn/icon-lib/ # subpage should be in same-origin   //未改  --zm
----
+    url: https://zmfk.github.io/icon-lib/ # subpage should be in same-origin
 ```

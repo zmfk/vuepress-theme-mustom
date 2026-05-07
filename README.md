@@ -74,8 +74,6 @@ or built into `docs/.vuepress/dist`
 vuepress build docs
 ```
 
-> Note: The backward slash ("\\") above is an escape character here while typing commands in command line or terminal.
-
 # Explanation of `_secret.tpl.js`
 
 To see how my `_secret.tpl.js` looks like, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/_secret.tpl.js).
@@ -101,6 +99,8 @@ module.exports = { // https://www.vuepress.cn/zh/config/
 
 To see how my `config.js` looks like, click [here](https://github.com/zmfk/vuepress-theme-mustom/blob/master/docs/.vuepress/config.js).
 
+>You can do it desuwa!
+
 ## General VuePress Settings
 
 ```js
@@ -114,7 +114,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   // base: '/', // My value, due to https://zmfk.github.io/
   base: '/MyBlog/', // Your value, if https://yourUsername.github.io/MyBlog/
   // Default title that appended to your site title
-  // title: '耀 の 个人网站 | Mark の Personal Website', // My value
+  // title: '醉梦 の 置物处 | SuiMu's THINGSHOUSE', // My value
   title: 'XXX 的博客 | XXX\'s Blog', // Your value
   // Default description that appended to your site description
   description: 'XXX 的博客, XXX\'s Blog, XXX, Mustom, VuePress',
@@ -149,10 +149,10 @@ module.exports = { // https://www.vuepress.cn/zh/config/
     if (process.env.NODE_ENV === 'production') {
       return {
         output: {
-          // My value, username=zmfk, repo=vuepress-theme-mustom, branch=gh-pages
-          //publicPath: 'https://cdn.jsdelivr.net/gh/zmfk/vuepress-theme-mustom@gh-pages/'
-          // Your value, if username=XXX, repo=MyBlog, branch=gh-pages
-          publicPath: 'https://cdn.jsdelivr.net/gh/XXX/MyBlog@gh-pages/'
+          // My value, username=zmfk, repo=zmfk.github.io, branch=master
+          //publicPath: 'https://cdn.jsdelivr.net/gh/zmfk/zmfk.github.io@master/'
+          // Your value, if username=XXX, repo=MyBlog, branch=master
+          publicPath: 'https://cdn.jsdelivr.net/gh/XXX/MyBlog@master/'
         }
       }
     }
@@ -187,9 +187,17 @@ This attribute is for sitemap generation **ONLY**.
 - My value: `'https://zmfk.github.io'`
 - Your Value: `'https://yourdomain.com/'`
 
+### year
+
+The starting year of site establishment, used for copyright display in the footer. For example:
+
+```js
+year: 2026,
+```
+
 ### clustrmaps
 
-![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustommaster/screenshots/clustrmaps.jpg)
+![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/clustrmaps.jpg)
 
 Set `clustrmaps` to `null` or ignore it to disable above. This requires service from [clustrmaps.com](https://clustrmaps.com/).
 
@@ -214,14 +222,14 @@ customBackgrounds: [
 
 ### socialShare
 
-![socialShare](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/refs/heads/master/screenshots/socialShare.jpg)
+![socialShare](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/socialShare.jpg)
 
 Looking to [this](https://sns.goyfe.com/guide/) for reference. The following example generates the result of above.
 
 ```js
 socialShare: { // https://sns.goyfe.com/guide/
   networks: ['qq', 'weibo', 'douban', 'email', 'whatsapp', 'facebook', 'reddit', 'telegram', 'line'],
-  email: '2272909403.com',
+  email: '2272909403@qq.com',
   fallbackImage: '/assets/img/avatar.png',
   noGlobalSocialShare: true
 },
@@ -282,8 +290,8 @@ qrcodes: [{ // qrcode for contact and friending
 ```js
 header: {
   sitename: [
-    '醉梦 の 个人网站', // zh
-    'SuiMu の Personal Website' // en
+    '<em><span>醉梦 の</span></em><strong><span>置物处</span></strong>', // zh
+    '<em><span>SuiMu\'s</span></em><strong><span>THINGSHOUSE</span></strong>' //en 
   ]
 },
 ```
@@ -308,8 +316,8 @@ brand: {
     link: 'https://github.com/zmfk'
   }, {
     icon: '<i class="fas fa-envelope fa-fw"></i>',
-    text: '2272709403@qq.com',
-    link: 'mailto://2272909403@qq.com'
+    text: '2272909403@qq.com',
+    link: 'mailto:2272909403@qq.com'
   }, {
     icon: '<i class="fab fa-qq fa-fw"></i>',
     text: '2272909403',
@@ -335,9 +343,7 @@ You can erase some of the items. This attribute isn't necessary to be edited if 
   - about # 'About' page
   - codes # 'Code Library' page
   - icons # 'Icon Font Library' page
-  - letter # 'Cover Letter Tips' page
   - records # 'Records' page
-  - resume # 'Resume Tips' page
   # 'Gallery' page is auto-generated
 ```
 
@@ -346,88 +352,47 @@ The following example matches the structure of above.
 ```js
 menus: [{
   caption: [
-    '本站', // zh
-    'MAIN' // en
+    '菜单',   // zh
+    'MENU'    // en
   ],
   icon: '<i class="fas fa-sitemap fa-fw"></i>',
-  items: [{
-    icon: '<i class="fas fa-home fa-fw"></i>',
-    text: [
-      '首页', // zh
-      'Home' // en
-    ],
-    link: '/'
-  }, {
-    icon: '<i class="fas fa-archive fa-fw"></i>',
-    text: [
-      '归档', // zh
-      'Archive' // en
-    ],
-    link: '/archive/'
-  }, {
-    icon: '<i class="fas fa-user fa-fw"></i>',
-    text: [
-      '关于', // zh
-      'About' // en
-    ],
-    link: '/about/'
-  }]
-}, {
-  caption: [
-    '工作', // zh
-    'JOB RELATED' // en
-  ],
-  icon: '<i class="fas fa-briefcase fa-fw"></i>',
-  items: [{
-    icon: '<i class="fas fa-paper-plane fa-fw"></i>',
-    text: [
-      '简历小贴士', // zh
-      'Resume Tips' // en
-    ],
-    link: '/resume/'
-  }, {
-    icon: '<i class="fas fa-file-contract fa-fw"></i>',
-    text: [
-      '求职信小贴士', // zh
-      'Cover Letter Tips' // en
-    ],
-    link: '/letter/'
-  }]
-}, {
-  caption: [
-    '其他', // zh
-    'OTHERS' // en
-  ],
-  icon: '<i class="fas fa-ellipsis-h fa-fw"></i>',
-  items: [{
-    icon: '<i class="fas fa-box fa-fw"></i>',
-    text: [
-      '代码库', // zh
-      'Code Library' // en
-    ],
-    link: '/codes/'
-  }, {
-    icon: '<i class="fas fa-icons fa-fw"></i>',
-    text: [
-      '图标字体库', // zh
-      'Icon Font Library' // en
-    ],
-    link: '/icons/'
-  }, {
-    icon: '<i class="fas fa-edit fa-fw"></i>',
-    text: [
-      '记录', // zh
-      'Records' // en
-    ],
-    link: '/records/'
-  }, {
-    icon: '<i class="fas fa-images fa-fw"></i>',
-    text: [
-      '图库', // zh
-      'Gallery' // en
-    ],
-    link: '/gallery/'
-  }]
+  items: [
+    {
+      icon: '<i class="fas fa-home fa-fw"></i>',
+      text: ['首页', 'Home'],
+      link: '/'
+    },
+    {
+      icon: '<i class="fas fa-archive fa-fw"></i>',
+      text: ['归档', 'Archive'],
+      link: '/archive/'
+    },
+    {
+      icon: '<i class="fas fa-box fa-fw"></i>',
+      text: ['代码库', 'Code Library'],
+      link: '/codes/'
+    },
+    {
+      icon: '<i class="fas fa-icons fa-fw"></i>',
+      text: ['图标字体库', 'Icon Font Library'],
+      link: '/icons/'
+    },
+    {
+      icon: '<i class="fas fa-edit fa-fw"></i>',
+      text: ['记录', 'Records'],
+      link: '/records/'
+    },
+    {
+      icon: '<i class="fas fa-images fa-fw"></i>',
+      text: ['图库', 'Gallery'],
+      link: '/gallery/'
+    },
+    {
+      icon: '<i class="fas fa-user fa-fw"></i>',
+      text: ['关于', 'About'],
+      link: '/about/'
+    }
+  ]
 }],
 ```
 
@@ -452,11 +417,12 @@ The following example generates the result of above.
 ```js
 // external links; use for the component that displays after clicking on the left-top button of header
 portals: [{
-  name: 'My Site',
-  desc: '醉梦 の 个人网站 | SuiMu の Personal Website',
-  icon: 'https://zmfk.github.io/asset/img/author.medium.png',
-  link: 'https://zmfk.github.io/'
-}, ],
+  name: "My Site",
+        desc: "醉梦 の 个人网站 | SuiMu の Personal Website",
+        icon: "/assets/img/avatar.png",
+        link: "/"
+}, {
+}],
 ```
 
 ### hitokoto
@@ -600,6 +566,6 @@ github:
     enabled: true # set this to true to enable Readme component
   iframe:
     enabled: true # set this to true to enable Iframe component
-    url: https://blog.ma-jinyao.cn/icon-lib/ # subpage should be in same-origin  //not change
+    url: https://zmfk.github.io/icon-lib/ # subpage should be in same-origin 
 ---
 ```
