@@ -19,7 +19,7 @@ module.exports = {
   title: "醉梦 の 置物处 | SuiMu's THINGSHOUSE",
 
   description:
-    "醉梦, SuiMu, 酔夢, 置物处, 博客, THINGSHOUSE, Mustom, VuePress, 耀の个人网站, 醉梦の置物处, SuiMu の Personal Website, SuiMu's Personal Website",
+    "醉梦, SuiMu, 酔夢, 置物处, 博客, THINGSHOUSE, Mustom, VuePress, 醉梦の个人网站, 醉梦の置物处, SuiMu の Personal Website, SuiMu's Personal Website",
 
   themeConfig: {
     domain: "https://zmfk.github.io", // for sitemap generate
@@ -40,7 +40,7 @@ module.exports = {
     images: {
       // for image replacment; no base needed; first layer key points to component name
       ad:
-        "https://raw.githubusercontent.com/jinyaoMa/jinyaoMa/master/qrcode.png",
+        "/assets/img/ad.png",
       avatar: "/assets/img/avatar.png",
       brand: "/assets/img/brand.png",
       hitokoto: {
@@ -145,7 +145,7 @@ module.exports = {
         {
           icon: '<i class="fas fa-envelope fa-fw"></i>',
           text: "2272909403@qq.com",
-          link: "mailto://2272909403@qq.com"
+          link: "mailto:2272909403@qq.com"
         },
         {
           icon: '<i class="fab fa-qq fa-fw"></i>',
