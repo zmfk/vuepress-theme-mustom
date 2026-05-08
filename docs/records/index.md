@@ -15,7 +15,7 @@ records:
       source: "https://github.com/zmfk/vuepress-theme-mustom"
       # format 'number/total' OR '100%' OR [customized]; [empty] to use 'N/A', NO DECIMAL POINT ALLOW
       # e.g. 12 / 34 ; 32/52 ; 22% ; 88% ; "Latest" ; "Complete"
-      progress: 7/10
+      progress: 9/10
       summary: 醉梦 の 个人网站 | SuiMu の Personal Website 
 
     # N/A
