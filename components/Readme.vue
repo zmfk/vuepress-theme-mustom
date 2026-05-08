@@ -59,6 +59,9 @@ export default {
     repo() {
       this.init();
     },
+    '$route.path'() {   // 新增：路由切换时自动折叠
+      this.isExtend = false;
+    }
   },
   mounted() {
     this.init();
