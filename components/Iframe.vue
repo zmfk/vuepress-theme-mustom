@@ -9,7 +9,7 @@
     <div class="inner">
       <iframe
         :src="url"
-        sandbox="allow-same-origin"
+        sandbox="allow-scripts allow-same-origin"
         frameborder="0"
         marginheight="0px"
         marginwidth="0px"

@@ -29,7 +29,7 @@ export default {
   computed: {
     metingJs() {
       return (
-        `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=480
+        `<iframe sandbox="allow-scripts allow-same-origin allow-popups" frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=480
 src="//music.163.com/outchain/player?type=0&id=7995413484&auto=0&height=480"
 style="position: relative; left: -10px; top: -10px;">
 </iframe>`
