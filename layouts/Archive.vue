@@ -77,10 +77,10 @@ export default {
 
       const script = document.createElement("script");
       script.src = "https://giscus.app/client.js";
-      script.setAttribute("data-repo", "zmfk/vuepress-theme-mustom");
-      script.setAttribute("data-repo-id", "R_kgDOSIcmvg");
+      script.setAttribute("data-repo", "zmfk/zmfk.github.io");
+      script.setAttribute("data-repo-id", "R_kgDOSJM3kg");
       script.setAttribute("data-category", "General");
-      script.setAttribute("data-category-id", "DIC_kwDOSIcmvs4C7Vwc");
+      script.setAttribute("data-category-id", "DIC_kwDOSJM3ks4C86cs");
       script.setAttribute("data-mapping", "pathname");
       script.setAttribute("data-strict", "0");                  // 保留原有
       script.setAttribute("data-reactions-enabled", "0");
