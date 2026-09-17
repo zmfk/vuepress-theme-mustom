@@ -199,7 +199,7 @@ year: 2026,
 
 ![feedpulse](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/feedpulse.jpg)
 
-Replacement for the discontinued Clustrmaps. Visitor statistics widget powered by [FeedPulse](https://feed-pulse.com/generator). Get your own embed code there, then configure as below.
+Replacement for the discontinued Clustrmaps. Visitor statistics widget powered by [FeedPulse](https://feed-pulse.com/generator). Get your own embed code there, then configure as below. Set `feedpulse` to `null` or remove it to disable the widget.
 
 ```js
 feedpulse: {

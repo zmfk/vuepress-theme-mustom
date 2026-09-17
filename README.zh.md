@@ -196,11 +196,11 @@ year: 2026,
 
 ![feedpulse](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/feedpulse.jpg)
 
-用于显示访客来源统计（替代已失效的 Clustrmaps）。需要前往 [FeedPulse](https://feed-pulse.com/generator) 生成专属嵌入代码，然后按下方配置。
+用于显示访客来源统计（替代已失效的 Clustrmaps）。需要前往 [FeedPulse](https://feed-pulse.com/generator) 生成专属嵌入代码，然后按下方配置。设置 `feedpulse` 为 `null` 或删掉它可以关闭该组件。
 
 ```js
 feedpulse: {
-  siteId: "你的-site-id", // 从 FeedPulse 生成器获取
+  siteId: "你的siteid", // 从 FeedPulse 生成器获取
   caption: ["访客来源", "Visitor Sources"], // [zh, en]
   options: {
     w: 240,           // 宽度
