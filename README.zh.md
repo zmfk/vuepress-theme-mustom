@@ -192,16 +192,31 @@ images: { // for image replacment; no base needed; first layer key points to com
 year: 2026,
 ```
 
-### clustrmaps
+### feedpulse
 
-![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/clustrmaps.jpg)
+![feedpulse](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/feedpulse.jpg)
 
-设置 `clustrmaps` 为 `null` 或者直接删掉它可以关掉这访问监测组件。这个组件需要 [clustrmaps.com](https://clustrmaps.com/) 的服务，就是要注册一下。
+用于显示访客来源统计（替代已失效的 Clustrmaps）。需要前往 [FeedPulse](https://feed-pulse.com/generator) 生成专属嵌入代码，然后按下方配置。
 
 ```js
-clustrmaps: {
-  id: "clustrmaps", // clstr_globe / clustrmaps
-  src="//clustrmaps.com/map_v2.js?d=4GkUWi6kMFx7OEpmT7qdm46V1jK1tYkT5M-9Euo0FFM&cl=ffffff&w=a" //例子，需要替换
+feedpulse: {
+  siteId: "你的-site-id", // 从 FeedPulse 生成器获取
+  caption: ["访客来源", "Visitor Sources"], // [zh, en]
+  options: {
+    w: 240,           // 宽度
+    bc: "ffffff",     // 背景色
+    tc: "333333",     // 文字色
+    brd: "f5f5f5",    // 边框色
+    hb: "f5f5f5",     // 头部背景色
+    hf: "333333",     // 头部文字色
+    font: "Nunito",   // 字体
+    rows: 6,          // 行数
+    cols: 3,          // 列数
+    cod: 0,           // 0 = 显示国家代码
+    poll: 5000,       // 轮询间隔（毫秒）
+    lang: "zh",       // 组件语言
+    bstyle: "minimal" // 徽章风格（minimal = 无动画）
+  }
 },
 ```
 

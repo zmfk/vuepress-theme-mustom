@@ -195,16 +195,31 @@ The starting year of site establishment, used for copyright display in the foote
 year: 2026,
 ```
 
-### clustrmaps
+### feedpulse
 
-![clustrmaps](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/clustrmaps.jpg)
+![feedpulse](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/feedpulse.jpg)
 
-Set `clustrmaps` to `null` or ignore it to disable above. This requires service from [clustrmaps.com](https://clustrmaps.com/).
+Replacement for the discontinued Clustrmaps. Visitor statistics widget powered by [FeedPulse](https://feed-pulse.com/generator). Get your own embed code there, then configure as below.
 
 ```js
-clustrmaps: {
-  id: "clustrmaps", // clstr_globe / clustrmaps
-  src: "//cdn.clustrmaps.com/map_v2.js?cl=333333&w=a&t=t&d=kuCCiVvtASTqmAMxPSTLcjxs-p8j6ht3LUi9z9Q-OKc&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=333333"
+feedpulse: {
+  siteId: "your-site-id", // get from FeedPulse generator
+  caption: ["访客来源", "Visitor Sources"], // [zh, en]
+  options: {
+    w: 240,           // width
+    bc: "ffffff",     // background color
+    tc: "333333",     // text color
+    brd: "f5f5f5",    // border color
+    hb: "f5f5f5",     // header background
+    hf: "333333",     // header text
+    font: "Nunito",   // font family
+    rows: 6,          // rows
+    cols: 3,          // columns
+    cod: 0,           // 0 = show country code
+    poll: 5000,       // polling interval (ms)
+    lang: "zh",       // widget language
+    bstyle: "minimal" // badge style (minimal = no animation)
+  }
 },
 ```
 
