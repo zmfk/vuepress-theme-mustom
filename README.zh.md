@@ -167,6 +167,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
 images: { // for image replacment; no base needed; first layer key points to component name
   ad: '/assets/img/ad.png',
   avatar: '/assets/img/avatar.png',
+  background: '/assets/img/background.png',
   brand: '/assets/img/brand.png',
   hitokoto: {
     left: '/assets/img/hitokoto.left.png',
@@ -582,3 +583,63 @@ github:
     enabled: true # set this to true to enable Iframe component
     url: https://zmfk.github.io/icon-lib/ # subpage should be in same-origin
 ```
+
+## 主题更新日志
+
+### Update 2026-09-18
+1. 替换 PWA 图标（android-chrome-192x192.png、android-chrome-512x512.png）
+2. 替换 apple-touch-icon.png，适配 iOS 主屏幕
+3. 替换 background.png，更新默认皮肤背景
+4. 替换 avatar.png 与 brand.png，更新个人标识
+5. 更新 README 预览截图（portals.jpg、preview.jpg）
+
+### Update 2026-09-17
+1. 用 FeedPulse 替换已失效的 Clustrmaps 访客统计组件
+2. 新增 components/parts/FeedPulse.vue，支持从 config.js 读取参数
+3. 修改 Aside.vue，移除 Clustrmaps 并引入 FeedPulse
+4. 更新 docs/.vuepress/config.js，新增 feedpulse 配置项，移除 clustrmaps
+5. 更新语言文件，用 feedpulse 替换 clustrmaps
+6. 为 FeedPulse 添加 CSS 兜底，禁止内部动画，彻底消除闪烁
+
+### Update 2026-05-13
+1. 更改 Giscus 从源码库至部署库
+2. Iframe.vue 与 Audioplayer.vue 加入 sandbox 属性 allow-scripts allow-same-origin allow-popups
+
+### Update 2026-05-08
+1. 修复代码库页面与图标页面展开悬浮、展开收起同步的问题
+2. 更新网页进度条
+
+### Update 2026-05-07
+1. 更新 config.js 中 ad 路径、codes 与 icons 页面配置
+2. 更新 codes 和 icons 页面，去掉注释
+3. 更新 README
+
+### Update 2026-05-06
+1. 新增 Happyday.vue 彩蛋组件
+2. 加入彩蛋部分
+3. 更改 README 中的图片
+
+### Update 2026-04-25
+1. 新增 Giscus 评论系统，支持中英切换时跟随切换语言
+2. 优化中英切换健壮性，避免快速点击导致状态不一致
+3. 将 Live2D 模型修改为 z16，添加 z16 模型文件
+4. 新增 live2d 和 LOCK-JSON 相关配置
+5. 修改 index.js 和 config.js，防止本地修改 config 时接收到 undefined 崩溃
+
+### Update 2026-04-23
+1. 更新密钥模板和工作流配置
+2. 更新地图插件
+3. 更新 README，修正关于页、记录页说明
+4. 修改关于页 "I am so cute =w=" 错位问题
+5. 修改 LICENSE
+6. 更新 README.zh.md，修正部分 config 内容
+
+### Update 2026-04-22
+1. 添加 GitHub Actions 自动部署工作流
+2. 移除 build 脚本中的 NODE_OPTIONS，适配 Actions 环境
+3. 修复生产环境样式丢失：移除 CDN publicPath
+4. 完整博客源码，准备部署
+
+### Update 2026-04-17
+1. Fork 自 jinyaoMa/vuepress-theme-mustom
+2. 替换 avatar.png、brand.png，更新个人标识

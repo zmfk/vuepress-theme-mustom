@@ -14,10 +14,9 @@ Simple design theme for VuePress，Blog，SuiMu's THINGSHOUSE | 醉梦 の 置�
 
 </div>
 
-<!-- TODO: Add actual preview image when available -->
 ![preview](https://raw.githubusercontent.com/zmfk/vuepress-theme-mustom/master/screenshots/preview.jpg)
 
-Sample: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample) <!-- TODO: Add sample repo when available -->
+Sample: [vuepress-theme-mustom-sample](https://github.com/zmfk/vuepress-theme-mustom-sample) 
 
 Language:
 - [中文](https://github.com/zmfk/vuepress-theme-mustom/blob/master/README.zh.md)
@@ -170,6 +169,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
 images: { // for image replacment; no base needed; first layer key points to component name
   ad: '/assets/img/ad.png',
   avatar: '/assets/img/avatar.png',
+  background: '/assets/img/background.png',
   brand: '/assets/img/brand.png',
   hitokoto: {
     left: '/assets/img/hitokoto.left.png',
@@ -584,3 +584,63 @@ github:
     url: https://zmfk.github.io/icon-lib/ # subpage should be in same-origin 
 ---
 ```
+
+## Changelog
+
+### Update 2026-09-18
+1. Replace PWA icons (android-chrome-192x192.png, android-chrome-512x512.png)
+2. Replace apple-touch-icon.png for iOS home screen
+3. Replace background.png with new default skin background
+4. Replace avatar.png and brand.png with personal branding
+5. Update README preview screenshots (portals.jpg, preview.jpg)
+
+### Update 2026-09-17
+1. Replace discontinued Clustrmaps with FeedPulse visitor statistics
+2. Add components/parts/FeedPulse.vue, reading parameters from config.js
+3. Modify Aside.vue, remove Clustrmaps and import FeedPulse
+4. Update docs/.vuepress/config.js, add feedpulse config, remove clustrmaps
+5. Update locale files, replace clustrmaps with feedpulse
+6. Add CSS fallback to FeedPulse, disable internal animations, eliminate flicker
+
+### Update 2026-05-13
+1. Move Giscus from source repo to deployment repo
+2. Add sandbox attributes (allow-scripts allow-same-origin allow-popups) to Iframe.vue and Audioplayer.vue
+
+### Update 2026-05-08
+1. Fix expand/hover issues and sync problems on Codes and Icons pages
+2. Update page progress bar
+
+### Update 2026-05-07
+1. Update config.js: ad path, codes and icons page settings
+2. Update codes and icons pages, remove comments
+3. Update README
+
+### Update 2026-05-06
+1. Add Happyday.vue easter egg component
+2. Add easter egg section
+3. Update images in README
+
+### Update 2026-04-25
+1. Add Giscus comment system, follows language switch
+2. Improve language switch robustness, avoid state inconsistency on rapid clicks
+3. Change Live2D model to z16, add z16 model files
+4. Add live2d and LOCK-JSON related configurations
+5. Modify index.js and config.js to prevent crashes from undefined when modifying config locally
+
+### Update 2026-04-23
+1. Update secret template and workflow configuration
+2. Update map plugin
+3. Update README, fix About page and Records page description
+4. Fix "I am so cute =w=" misalignment on About page
+5. Modify LICENSE
+6. Update README.zh.md, fix some config content
+
+### Update 2026-04-22
+1. Add GitHub Actions automated deployment workflow
+2. Remove NODE_OPTIONS from build script, adapt to Actions environment
+3. Fix production style loss: remove CDN publicPath
+4. Complete blog source code, ready for deployment
+
+### Update 2026-04-17
+1. Fork from jinyaoMa/vuepress-theme-mustom
+2. Replace avatar.png and brand.png with personal branding
