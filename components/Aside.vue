@@ -2,13 +2,7 @@
   <div class="Aside">
     <Panel />
     <Audioplayer />
-    <Clustrmaps
-      v-if="
-        $themeConfig.clustrmaps &&
-        $themeConfig.clustrmaps.id &&
-        $themeConfig.clustrmaps.src
-      "
-    />
+    <FeedPulse />
     <transition name="fade">
       <Toc v-if="$page.id === 'post' && !mustom$IsMobile" />
     </transition>
@@ -19,7 +13,7 @@
 import Panel from "./parts/Panel";
 import Audioplayer from "./parts/Audioplayer";
 import Toc from "./parts/Toc";
-import Clustrmaps from "./parts/Clustrmaps";
+import FeedPulse from "./parts/FeedPulse";
 
 export default {
   name: "Aside",
@@ -27,7 +21,7 @@ export default {
     Panel,
     Audioplayer,
     Toc,
-    Clustrmaps,
+    FeedPulse,
   },
   methods: {
     height() {

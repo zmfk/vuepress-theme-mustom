@@ -25,13 +25,28 @@ module.exports = {
     domain: "https://zmfk.github.io", // for sitemap generate
     translate: secret.translate, // baidu translation
     comment: secret.comment, // vssue setting
-    // clustrmaps setting
-    clustrmaps: {
-      id: "clustrmaps", // clstr_globe / clustrmaps
-      src:
-        "//cdn.clustrmaps.com/map_v2.js?cl=333333&w=a&t=t&d=QTMMqWJwDWvxhgLWEBF3UfSvF3viGCiMKFuvvuvK7pY&co=ffffff&ct=333333&cmo=3acc3a&cmn=ff5353"
+    // feedpulse setting (替代已失效的 clustrmaps)
+    feedpulse: {
+      siteId: "72a39062-2e27-4825-9d8e-c5afd2c7519b", // 你的 site_id
+      caption: ["访客来源", "Visitor Sources"],         // [zh, en]
+      // 下面是传递给 FeedPulse 脚本的参数，可自由调整
+      options: {
+        w: 240,           // 宽度，适配侧边栏
+        bc: "ffffff",     // 背景色
+        tc: "333333",     // 文字色
+        brd: "f5f5f5",    // 边框色
+        hb: "f5f5f5",     // 头部背景色
+        hf: "333333",     // 头部文字色
+        font: "Nunito",   // 字体
+        rows: 6,          // 行数
+        cols: 3,          // 列数
+        cod: 0,           // 0 = 显示国家代码
+        poll: 5000,       // 轮询间隔（毫秒）
+        lang: "zh",       // 组件语言
+        bstyle: "minimal" // 徽章风格（minimal = 无动画，不会闪烁）
+      }
     },
-    author: "SuiMu", 
+    author: "SuiMu",
     year: 2026, // year of site started
     maximizeLaunch: false, // full size image for launch
     noEmpty: false, // hide empty component
