@@ -43,7 +43,7 @@ module.exports = { // placeholder [::]
     caption: '设置',
     names: {
       nightshift: '夜间模式',
-      nocanvas: '禁用画布',
+      nocanvas: '禁用装饰效果',
       language: 'English'
     }
   },
@@ -163,8 +163,8 @@ module.exports = { // placeholder [::]
     caption: '图标框'
   },
 
-  clustrmaps: {
-    caption: '访客地图'
+  feedpulse: {
+    caption: '访客来源'
   }
 
 }

@@ -43,7 +43,7 @@ module.exports = {
     caption: 'Settings',
     names: {
       nightshift: 'Night Mode',
-      nocanvas: 'Disable Canvas',
+      nocanvas: 'Disable Decorations',
       language: 'English'
     }
   },
@@ -163,8 +163,8 @@ module.exports = {
     caption: 'Icon Frame'
   },
 
-  clustrmaps: {
-    caption: 'Clustrmaps'
+  feedpulse: {
+    caption: 'Visitor Sources'
   }
 
 }
