@@ -1,12 +1,26 @@
 <template>
-  <div class="FeedPulse card">
+  <div class="FeedPulse card" v-if="config">
     <div class="caption">
       <span class="icon">
         <i class="fas fa-flag fa-fw"></i>
       </span>
       <span v-html="caption"></span>
     </div>
-    <div class="inner" ref="container"></div>
+
+    <!-- 中文容器 -->
+    <div
+      class="inner"
+      ref="containerZh"
+      v-show="langKey === 'zh'"
+    ></div>
+
+    <!-- 英文容器 -->
+    <div
+      class="inner"
+      ref="containerEn"
+      v-show="langKey === 'en'"
+    ></div>
+
     <div class="minimize" @click="mustom$ToggleMinimize"></div>
   </div>
 </template>
@@ -25,22 +39,46 @@ export default {
       }
       return "访客来源";
     },
+    langKey() {
+      return this.mustom$LangIndex === 0 ? "zh" : "en";
+    },
   },
   mounted() {
-    const cfg = this.config;
-    if (!cfg || !cfg.siteId) return;
+    // 挂载时同时注入两种语言的脚本，各自加载一次
+    this.$nextTick(() => {
+      this.injectScript("zh", this.$refs.containerZh);
+      this.injectScript("en", this.$refs.containerEn);
+    });
+  },
+  methods: {
+    injectScript(lang, container) {
+      const cfg = this.config;
+      if (!cfg || !cfg.siteId || !container) return;
 
-    // 从 config.js 的 options 拼接参数
-    const opt = cfg.options || {};
-    const query = Object.keys(opt)
-      .map((key) => `${key}=${encodeURIComponent(opt[key])}`)
-      .join("&");
+      const opt = {
+        w: 240,
+        rows: 6,
+        cols: 3,
+        poll: 60000,
+        bstyle: "minimal",
+        bc: "ffffff",
+        tc: "333333",
+        brd: "f5f5f5",
+        hb: "f5f5f5",
+        hf: "333333",
+        ...(cfg.options || {}),
+        lang: lang,
+      };
 
-    // 加载 flag-counter 组件
-    const script = document.createElement("script");
-    script.src = `https://feed-pulse.com/api/embed/flag-counter.js?site_id=${cfg.siteId}&${query}&v=15`;
-    script.async = true;
-    this.$refs.container.appendChild(script);
+      const query = Object.keys(opt)
+        .map((key) => `${key}=${encodeURIComponent(opt[key])}`)
+        .join("&");
+
+      const script = document.createElement("script");
+      script.src = `https://feed-pulse.com/api/embed/flag-counter.js?site_id=${cfg.siteId}&${query}&v=15`;
+      script.async = true;
+      container.appendChild(script);
+    },
   },
 };
 </script>
@@ -52,7 +90,6 @@ export default {
   min-height 120px
   >>> a:before
     display none
-  // 兜底：禁止组件内部动画，彻底消除闪烁
   >>> *
     animation none !important
     transition none !important

@@ -594,6 +594,8 @@ github:
 5. 更新 README 预览截图（portals.jpg、preview.jpg）
 6. About 页面支持中英分离显示，随语言切换按钮同步切换
 7. stores/lang.js 与 mixins/index.js 同步 html lang 属性
+8. FeedPulse 访客地图支持中英分离显示，随语言切换同步
+9. 网易云播放器深色主题适配：覆盖夜间模式与暗彩皮肤
 
 ### Update 2026-09-17
 1. 用 FeedPulse 替换已失效的 Clustrmaps 访客统计组件

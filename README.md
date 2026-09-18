@@ -595,6 +595,8 @@ github:
 5. Update README preview screenshots (portals.jpg, preview.jpg)
 6. About page separates Chinese and English content, follows language switch
 7. Sync html lang attribute in stores/lang.js and mixins/index.js
+8. FeedPulse visitor map separates Chinese and English, follows language switch
+9. Dark theme adaptation for NetEase player: covers night mode and dark skin
 
 ### Update 2026-09-17
 1. Replace discontinued Clustrmaps with FeedPulse visitor statistics
