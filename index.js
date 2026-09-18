@@ -293,6 +293,8 @@ module.exports = (themeConfig, context) => {
       THEME_SHORTNAME: "Mustom",
       THEME_AUTHOR: "SuiMu",
       THEME_AUTHOR_LINK: "//github.com/zmfk",
+      ORIGINAL_AUTHOR: "jinyaoMa",
+      ORIGINAL_AUTHOR_LINK: "//github.com/jinyaoMa",
       CC_LICENSE_LINK: "//creativecommons.org/licenses/by-nc-sa/4.0/"
     };
   };

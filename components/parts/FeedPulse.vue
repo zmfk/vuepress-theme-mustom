@@ -55,17 +55,10 @@ export default {
       const cfg = this.config;
       if (!cfg || !cfg.siteId || !container) return;
 
+      // 只保留必须的默认值作为 fallback，其他全部从 config.js 读取
       const opt = {
-        w: 240,
-        rows: 6,
-        cols: 3,
         poll: 60000,
         bstyle: "minimal",
-        bc: "ffffff",
-        tc: "333333",
-        brd: "f5f5f5",
-        hb: "f5f5f5",
-        hf: "333333",
         ...(cfg.options || {}),
         lang: lang,
       };

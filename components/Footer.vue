@@ -30,25 +30,29 @@ export default {
   computed: {
     copyright() {
       return this.mustom$Locale.footer.copyright
-        .replace("[:start_year:]", this.$themeConfig.year)
-        .replace("[:build_year:]", BUILD_YEAR)
-        .replace("[:author:]", this.$themeConfig.author);
+        .replace(/\[:start_year:\]/g,this.$themeConfig.year)
+        .replace(/\[:build_year:\]/g, BUILD_YEAR)
+        .replace(/\[:author:\]/g, this.$themeConfig.author);
     },
     powered() {
       if (typeof __VUEPRESS__ === "undefined") return "";
       return this.mustom$Locale.footer.powered.replace(
-        "[:vuepress:]",
+        /\[:vuepress:\]/g,
         `<a target="_blank" href="${VUEPRESS_OFFICIAL_SITE}" title="VuePress v${__VUEPRESS__.version}">VuePress</a>`
       );
     },
     themed() {
       return this.mustom$Locale.footer.themed
         .replace(
-          "[:theme:]",
+          /\[:theme:\]/g,
           `<a target="_blank" href="${THEME_REPO_URL}" title="${THEME_NAME}">${THEME_SHORTNAME}</a>`
         )
         .replace(
-          "[:author:]",
+          /\[:author:\]/g,
+          `<a target="_blank" href="${ORIGINAL_AUTHOR_LINK}" title="${ORIGINAL_AUTHOR}">${ORIGINAL_AUTHOR}</a>`
+        )
+        .replace(
+          /\[:maintainer:\]/g,
           `<a target="_blank" href="${THEME_AUTHOR_LINK}" title="${THEME_AUTHOR}">${THEME_AUTHOR}</a>`
         );
     },

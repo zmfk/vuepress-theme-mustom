@@ -216,8 +216,7 @@ feedpulse: {
     rows: 6,          // rows
     cols: 3,          // columns
     cod: 0,           // 0 = show country code
-    poll: 5000,       // polling interval (ms)
-    lang: "zh",       // widget language
+    poll: 60000,       // polling interval (ms)
     bstyle: "minimal" // badge style (minimal = no animation)
   }
 },
@@ -597,6 +596,7 @@ github:
 7. Sync html lang attribute in stores/lang.js and mixins/index.js
 8. FeedPulse visitor map separates Chinese and English, follows language switch
 9. Dark theme adaptation for NetEase player: covers night mode and dark skin
+10. Footer maintainer and original author names use placeholder hyperlinks, distinguishing maintainer from original author
 
 ### Update 2026-09-17
 1. Replace discontinued Clustrmaps with FeedPulse visitor statistics

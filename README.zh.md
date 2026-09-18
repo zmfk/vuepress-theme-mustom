@@ -214,8 +214,7 @@ feedpulse: {
     rows: 6,          // 行数
     cols: 3,          // 列数
     cod: 0,           // 0 = 显示国家代码
-    poll: 5000,       // 轮询间隔（毫秒）
-    lang: "zh",       // 组件语言
+    poll: 60000,       // 轮询间隔（毫秒）
     bstyle: "minimal" // 徽章风格（minimal = 无动画）
   }
 },
@@ -596,6 +595,7 @@ github:
 7. stores/lang.js 与 mixins/index.js 同步 html lang 属性
 8. FeedPulse 访客地图支持中英分离显示，随语言切换同步
 9. 网易云播放器深色主题适配：覆盖夜间模式与暗彩皮肤
+10. Footer 维护者与原作者名字改为占位符超链接，区分维护者与原作者
 
 ### Update 2026-09-17
 1. 用 FeedPulse 替换已失效的 Clustrmaps 访客统计组件

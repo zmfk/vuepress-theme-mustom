@@ -15,7 +15,7 @@ module.exports = {
   footer: {
     copyright: '© [:start_year:] - [:build_year:] [:author:]',
     powered: 'Powered by [:vuepress:]',
-    themed: 'Theme [:theme:] By [:author:], maintained by SuiMu, thanks to original author jinyaoMa',
+    themed: 'Theme [:theme:] By [:author:], maintained by [:maintainer:], thanks to original author [:author:]',
     pv: 'Site total page views',
     uv: 'Site total visitors',
     wd: 'Site total word count',
@@ -43,7 +43,7 @@ module.exports = {
     caption: 'Settings',
     names: {
       nightshift: 'Night Mode',
-      nocanvas: 'Disable Decorations',
+      nocanvas: 'Hide Decor',
       language: 'English'
     }
   },

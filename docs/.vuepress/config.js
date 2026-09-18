@@ -31,20 +31,20 @@ module.exports = {
       caption: ["访客来源", "Visitor Sources"],         // [zh, en]
       // 下面是传递给 FeedPulse 脚本的参数，可自由调整
       options: {
-        w: 240,           // 宽度，适配侧边栏
-        bc: "ffffff",     // 背景色
-        tc: "333333",     // 文字色
-        brd: "f5f5f5",    // 边框色
-        hb: "f5f5f5",     // 头部背景色
-        hf: "333333",     // 头部文字色
-        font: "Nunito",   // 字体
-        rows: 6,          // 行数
-        cols: 3,          // 列数
-        cod: 0,           // 0 = 显示国家代码
-        poll: 5000,       // 轮询间隔（毫秒）
-        lang: "zh",       // 组件语言
-        bstyle: "minimal" // 徽章风格（minimal = 无动画，不会闪烁）
-      }
+        w: 240,
+        rows: 6,
+        cols: 3,
+        poll: 60000,      // ← 改成 60000
+        bstyle: "minimal", // ← 加上
+        bc: "ffffff",
+        tc: "333333",
+        brd: "f5f5f5",
+        hb: "f5f5f5",
+        hf: "333333",
+        font: "Nunito",
+        cod: 0
+        // 语言切换：lang ：由组件动态覆盖
+  }
     },
     author: "SuiMu",
     year: 2026, // year of site started

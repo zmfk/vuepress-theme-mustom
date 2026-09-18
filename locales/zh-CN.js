@@ -15,7 +15,7 @@ module.exports = { // placeholder [::]
   footer: {
     copyright: '© [:start_year:] - [:build_year:] [:author:]',
     powered: '由 [:vuepress:] 强力驱动',
-    themed: '主题 [:theme:] By [:author:] , 本站由 SuiMu 维护，致谢原作者 jinyaoMa ',
+    themed: '主题 [:theme:] By [:author:] , 本站由 [:maintainer:] 维护，致谢原作者 [:author:] ',
     pv: '本站总点击量',
     uv: '本站总访客量',
     wd: '本站文章总字数',
@@ -43,7 +43,7 @@ module.exports = { // placeholder [::]
     caption: '设置',
     names: {
       nightshift: '夜间模式',
-      nocanvas: '禁用装饰效果',
+      nocanvas: '隐藏装饰',
       language: 'English'
     }
   },
