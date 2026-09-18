@@ -37,6 +37,10 @@ export default savedata => {
             savedata.__set__('lang', 'zh-CN');
             break;
         }
+        // 同步 html lang
+        if (typeof document !== 'undefined') {
+          document.documentElement.lang = state.lang;
+        }
       }
     },
     actions: {

@@ -137,3 +137,14 @@ a
 
 .Readme .inner
   overflow hidden
+
+// About 页面语言切换
+// 默认隐藏英文，只显示中文
+[lang="en"]
+  display none
+
+// 当 html lang 为 en-US 时，反转：显示英文，隐藏中文
+html[lang*="en"] [lang="en"]
+  display block
+html[lang*="en"] [lang="zh"]
+  display none

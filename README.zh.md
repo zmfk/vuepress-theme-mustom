@@ -592,6 +592,8 @@ github:
 3. 替换 background.png，更新默认皮肤背景
 4. 替换 avatar.png 与 brand.png，更新个人标识
 5. 更新 README 预览截图（portals.jpg、preview.jpg）
+6. About 页面支持中英分离显示，随语言切换按钮同步切换
+7. stores/lang.js 与 mixins/index.js 同步 html lang 属性
 
 ### Update 2026-09-17
 1. 用 FeedPulse 替换已失效的 Clustrmaps 访客统计组件

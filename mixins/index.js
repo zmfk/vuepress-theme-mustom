@@ -17,7 +17,11 @@ export default (_, Vuex) => {
     },
     mounted() {
       // smoothscroll
-      smoothscroll.polyfill()
+      smoothscroll.polyfill();
+      // 初始化 html lang
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = this.mustom$Lang;
+      }
     },
     methods: {
       ...Vuex.mapActions({

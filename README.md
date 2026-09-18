@@ -593,6 +593,8 @@ github:
 3. Replace background.png with new default skin background
 4. Replace avatar.png and brand.png with personal branding
 5. Update README preview screenshots (portals.jpg, preview.jpg)
+6. About page separates Chinese and English content, follows language switch
+7. Sync html lang attribute in stores/lang.js and mixins/index.js
 
 ### Update 2026-09-17
 1. Replace discontinued Clustrmaps with FeedPulse visitor statistics
