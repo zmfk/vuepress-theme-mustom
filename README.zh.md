@@ -585,6 +585,11 @@ github:
 
 ## 主题更新日志
 
+### Update 2026-10-08
+1. 在 docs/records/index.md 中新增 CPU Scheduler 项目条目
+2. 新增 cpu-scheduler-logo.png 作为项目封面，存放于 docs/.vuepress/public/assets/img/
+3. 个人网站进度从 9/10 更新为 92/100
+
 ### Update 2026-09-18
 1. 替换 PWA 图标（android-chrome-192x192.png、android-chrome-512x512.png）
 2. 替换 apple-touch-icon.png，适配 iOS 主屏幕

@@ -586,6 +586,11 @@ github:
 
 ## Changelog
 
+### Update 2026-10-08
+1. Add CPU Scheduler project entry in docs/records/index.md
+2. Add cpu-scheduler-logo.png as project cover under docs/.vuepress/public/assets/img/
+3. Update personal website progress from 9/10 to 92/100
+
 ### Update 2026-09-18
 1. Replace PWA icons (android-chrome-192x192.png, android-chrome-512x512.png)
 2. Replace apple-touch-icon.png for iOS home screen
