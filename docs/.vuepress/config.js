@@ -238,12 +238,24 @@ module.exports = {
     ],
     meting: {},   //不用了 --zm
     // external links; use for the component that displays after clicking on the left-top button of header
-    portals: [
+        portals: [
       {
         name: "My Site",
         desc: "醉梦 の 个人网站 | SuiMu の Personal Website",
         icon: "/assets/img/avatar.png",
         link: "/"
+      },
+      {
+        name: "CPU Scheduler",
+        desc: "CPU 调度算法 | CPU 调度算法模拟器",
+        icon: "/assets/img/cpu-scheduler-logo.png", // 建议放一张 cpu 相关的图，或者暂时用现成的图
+        link: "https://zmfk.github.io/cpu-scheduler/" // 替换为真实的 GitHub 链接或演示链接
+      },
+      {
+        name: "Mini Work",
+        desc: "作业提交 | 极简作业提交系统",
+        icon: "/assets/img/mini-homework-logo.png", // 建议放一张对应图
+        link: "https://github.com/zmfk/mini-homework" // 替换为真实的 GitHub 链接
       },
     ],
     hitokoto: {
