@@ -128,7 +128,7 @@ module.exports = { // https://www.vuepress.cn/zh/config/
   // apple-touch-icon is in folder docs/.vuepress/public/assets/img/
   head: [
     // PWA settings, https://www.vuepress.cn/plugin/official/plugin-pwa.html
-    ['link', { rel: 'icon', href: '/favicon.ico', type: "image/x-icon" }],
+    ['link', { rel: 'icon', href: '/zmfk.png', type: "image/png" }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],

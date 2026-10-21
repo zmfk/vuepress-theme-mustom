@@ -290,8 +290,8 @@ module.exports = {
       "link",
       {
         rel: "icon",
-        href: "/favicon.ico",
-        type: "image/x-icon"
+        href: "/zmfk.png", // 改成你的 png 路径
+        type: "image/png"
       }
     ],
     [
