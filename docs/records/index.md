@@ -4,8 +4,18 @@ records:
   enabled: true
   items:
 
+    # 极简作业提交系统
+    - cover: /assets/img/mini-homework-logo.png
+      date: "2026/10 - 2026/10"
+      title: "Mini-Homework - 极简作业提交系统"
+      type: project
+      author: SuiMu
+      source: "https://github.com/zmfk/mini-homework"
+      progress: "100/100"
+      summary: "一个基于 Flask + SQLite 的轻量化作业提交与管理系统。支持管理员/老师/学生三种角色隔离，内置 .docx 宏病毒拦截、AJAX 无刷新上传、后台三列独立滚动、实时 CPU 监控等功能。物理文件清理机制，基本解决免费云服务器空间受限。"
+
     #CPU调度算法模拟器
-    - cover: /assets/img/cpu-scheduler-logo.png # [empty] to use default cover
+    - cover: /assets/img/cpu-scheduler-logo.png 
       date: "2026/10 - 2026/10"
       title: "CPU Scheduler - CPU 调度算法模拟器"
       type: project
