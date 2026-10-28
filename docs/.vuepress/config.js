@@ -297,6 +297,7 @@ module.exports = {
     ['link', { rel: 'preconnect', href: '//giscus.app', crossorigin: 'anonymous' }],
     ['link', { rel: 'dns-prefetch', href: '//api.github.com' }],
     ['link', { rel: 'preconnect', href: '//api.github.com', crossorigin: 'anonymous' }],
+    ['script', { defer: true, src: 'https://events.vercount.one/js' }],
 
     [
       "link",

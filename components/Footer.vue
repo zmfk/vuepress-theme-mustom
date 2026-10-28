@@ -3,14 +3,14 @@
     <div v-html="copyright"></div>
     <div v-html="powered"></div>
     <div v-html="themed"></div>
-        <div class="footerCount">
+    <div class="footerCount">
       <span :title="mustom$Locale.footer.pv">
         <i class="fas fa-eye fa-fw" />
-        {{mustom$Busuanzi.pv}}  <!-- 改回这样 -->
+        <span id="vercount_value_site_pv"></span>
       </span>
       <span :title="mustom$Locale.footer.uv">
         <i class="fas fa-user-tie fa-fw" />
-        {{mustom$Busuanzi.uv}}  <!-- 改回这样 -->
+        <span id="vercount_value_site_uv"></span>
       </span>
       <span :title="mustom$Locale.footer.wd">
         <i class="fas fa-file-word fa-fw" />
@@ -25,7 +25,8 @@
 export default {
   name: "Footer",
   mounted() {
-    this.mustom$InitBusuanzi();
+    // 已经切换为 Vercount，不再需要请求旧的不蒜子接口
+    // this.mustom$InitBusuanzi(); 
   },
   computed: {
     copyright() {

@@ -51,21 +51,8 @@ export default (_, Vuex) => {
         });
       },
       mustom$InitBusuanzi() {
-        // 直接请求 Vercount 的 API
-        fetch('https://events.vercount.one/api/v2/log')
-          .then(res => res.json())
-          .then(data => {
-            // 如果拿到数据就赋值，没拿到就保持原样
-            if (data && data.site_pv) {
-              this.mustom$Busuanzi.pv = data.site_pv;
-              this.mustom$Busuanzi.uv = data.site_uv;
-            }
-          })
-          .catch(err => {
-            // 如果被墙或者断网，显示 0
-            this.mustom$Busuanzi.pv = '0';
-            this.mustom$Busuanzi.uv = '0';
-          });
+        // 已经切换为 Vercount 原生标签，此处函数已废弃
+        return;
       },
       mustom$InitHitokoto() {
         let that = this;
