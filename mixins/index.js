@@ -6,8 +6,8 @@ export default (_, Vuex) => {
     data() {
       return {
         mustom$Busuanzi: {
-          pv: '∞',
-          uv: '∞'
+          pv: '...',
+          uv: '...'
         },
         mustom$Hitokoto: {
           word: 'Loading...',
@@ -51,18 +51,8 @@ export default (_, Vuex) => {
         });
       },
       mustom$InitBusuanzi() {
-        jsonp(
-          "//busuanzi.ibruce.info/busuanzi",
-          {
-            jsonpCallback:
-              "BusuanziCallback_" + Math.floor(1099511627776 * Math.random())
-          },
-          result => {
-            this.mustom$Busuanzi.pv = result.site_pv;
-            this.mustom$Busuanzi.uv = result.site_uv;
-          },
-          true
-        );
+        return;
+        //放弃使用频繁502的不蒜子
       },
       mustom$InitHitokoto() {
         let that = this;

@@ -6,11 +6,11 @@
     <div class="footerCount">
       <span :title="mustom$Locale.footer.pv">
         <i class="fas fa-eye fa-fw" />
-        {{mustom$Busuanzi.pv}}
+        <span id="vercount_value_site_pv"></span>
       </span>
       <span :title="mustom$Locale.footer.uv">
         <i class="fas fa-user-tie fa-fw" />
-        {{mustom$Busuanzi.uv}}
+        <span id="vercount_value_site_uv"></span>
       </span>
       <span :title="mustom$Locale.footer.wd">
         <i class="fas fa-file-word fa-fw" />
@@ -25,7 +25,6 @@
 export default {
   name: "Footer",
   mounted() {
-    this.mustom$InitBusuanzi();
   },
   computed: {
     copyright() {
