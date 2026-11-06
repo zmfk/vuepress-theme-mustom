@@ -4,6 +4,17 @@ records:
   enabled: true
   items:
 
+    # 题库刷题应用
+    - cover: /assets/img/KillQuestion-logo.png
+      date: "2026/11 - 2026/11" 
+      title: "KillQuestion - 本地优先的题库刷题应用"
+      type: project
+      author: SuiMu
+      source: "https://github.com/zmfk/KillQuestion"
+      progress: "100/100" 
+      summary: "一个本地优先的题库刷题应用。支持重点刷题与大范围刷题，离线可用，数据只保存在本机，不依赖云端。"
+
+
     # 极简作业提交系统
     - cover: /assets/img/mini-homework-logo.png
       date: "2026/10 - 2026/10"
@@ -22,7 +33,7 @@ records:
       author: SuiMu
       source: "https://github.com/zmfk/cpu-scheduler"
       progress: "100/100"
-      summary: "一个纯前端的 CPU 调度算法可视化模拟器，支持 8 种经典调度算法、逐秒动画演示、算法对比、甘特图绘制、指标统计与 CSV 导出。在线演示：https://zmfk.github.io/cpu-scheduler/"
+      summary: "一个纯前端的 CPU 调度算法可视化模拟器，支持 8 种经典调度算法、逐秒动画演示、算法对比、甘特图绘制、指标统计与 CSV 导出。
 
     # 个人博客
     - cover: /assets/img/avatar.png # [empty] to use default cover

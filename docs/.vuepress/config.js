@@ -248,15 +248,21 @@ module.exports = {
       {
         name: "CPU Scheduler",
         desc: "CPU 调度算法 | CPU 调度算法模拟器",
-        icon: "/assets/img/cpu-scheduler-logo.png", // 建议放一张 cpu 相关的图，或者暂时用现成的图
+        icon: "/assets/img/cpu-scheduler-logo.png", 
         link: "https://zmfk.github.io/cpu-scheduler/" // 替换为真实的 GitHub 链接或演示链接
       },
       {
         name: "Mini Work",
         desc: "作业提交 | 极简作业提交系统",
-        icon: "/assets/img/mini-homework-logo.png", // 建议放一张对应图
+        icon: "/assets/img/mini-homework-logo.png", 
         link: "https://github.com/zmfk/mini-homework" // 替换为真实的 GitHub 链接
       },
+      {
+        name: "KillQuestion",
+        desc: "刷题 | KillQuestion 题目练习工具",
+        icon: "/assets/img/KillQuestion-logo.png",
+        link: "https://zmfk.github.io/KillQuestion/"
+      }
     ],
     hitokoto: {
       customs: [
