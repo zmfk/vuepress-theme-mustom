@@ -33,7 +33,7 @@ records:
       author: SuiMu
       source: "https://github.com/zmfk/cpu-scheduler"
       progress: "100/100"
-      summary: "一个纯前端的 CPU 调度算法可视化模拟器，支持 8 种经典调度算法、逐秒动画演示、算法对比、甘特图绘制、指标统计与 CSV 导出。
+      summary: "一个纯前端的 CPU 调度算法可视化模拟器，支持 8 种经典调度算法、逐秒动画演示、算法对比、甘特图绘制、指标统计与 CSV 导出。"
 
     # 个人博客
     - cover: /assets/img/avatar.png # [empty] to use default cover
