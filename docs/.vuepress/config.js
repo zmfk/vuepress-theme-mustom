@@ -248,7 +248,7 @@ module.exports = {
       {
         name: "OS Visualizer",
         desc: "操作系统可视化 | 操作系统核心机制可视化",
-        icon: "/assets/img/cpu-scheduler-logo.png", 
+        icon: "/assets/img/OS-Visualizer-logo.png", 
         link: "https://zmfk.github.io/OS-Visualizer/" // 替换为真实的 GitHub 链接或演示链接
       },
       {
