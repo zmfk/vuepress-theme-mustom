@@ -246,10 +246,10 @@ module.exports = {
         link: "/"
       },
       {
-        name: "CPU Scheduler",
-        desc: "CPU 调度算法 | CPU 调度算法模拟器",
+        name: "OS Visualizer",
+        desc: "操作系统可视化 | 操作系统核心机制可视化",
         icon: "/assets/img/cpu-scheduler-logo.png", 
-        link: "https://zmfk.github.io/cpu-scheduler/" // 替换为真实的 GitHub 链接或演示链接
+        link: "https://zmfk.github.io/OS-Visualizer/" // 替换为真实的 GitHub 链接或演示链接
       },
       {
         name: "Mini Work",
