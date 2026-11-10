@@ -26,7 +26,7 @@ records:
       summary: "一个基于 Flask + SQLite 的轻量化作业提交与管理系统。支持管理员/老师/学生三种角色隔离，内置 .docx 宏病毒拦截、AJAX 无刷新上传、后台三列独立滚动、实时 CPU 监控等功能。物理文件清理机制，基本解决免费云服务器空间受限。"
 
     #操作系统核心机制可视化
-    - cover: /assets/img/OS-Visualizer-logo.png.png 
+    - cover: /assets/img/OS-Visualizer-logo.png 
       date: "2026/10 - 2026/11"
       title: "OS Visualizer - 操作系统核心机制可视化"
       type: project
